@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation11 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation6 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -37,10 +37,9 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.protocol = new System.Windows.Forms.Label();
             this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.Disconnectbtn = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.Connectbtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.servername = new System.Windows.Forms.Label();
@@ -49,6 +48,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,52 +57,50 @@
             this.guna2RadialGauge1 = new Guna.UI2.WinForms.Guna2RadialGauge();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.pn_menu = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.Australia = new Guna.UI2.WinForms.Guna2Button();
+            this.Japan = new Guna.UI2.WinForms.Guna2Button();
+            this.UK = new Guna.UI2.WinForms.Guna2Button();
+            this.Singapore = new Guna.UI2.WinForms.Guna2Button();
+            this.USA = new Guna.UI2.WinForms.Guna2Button();
             this.Netherlands = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.DR = new System.Windows.Forms.Label();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.DU = new System.Windows.Forms.Label();
+            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.DU = new System.Windows.Forms.Label();
-            this.DR = new System.Windows.Forms.Label();
             this.DS = new System.Windows.Forms.Label();
-            this.USA = new Guna.UI2.WinForms.Guna2Button();
-            this.UK = new Guna.UI2.WinForms.Guna2Button();
-            this.Singapore = new Guna.UI2.WinForms.Guna2Button();
-            this.Australia = new Guna.UI2.WinForms.Guna2Button();
-            this.Japan = new Guna.UI2.WinForms.Guna2Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.username = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.label9 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            this.pn_menu.SuspendLayout();
-            this.guna2GradientPanel2.SuspendLayout();
-            this.guna2GradientPanel3.SuspendLayout();
-            this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.pn_menu.SuspendLayout();
+            this.guna2GradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
+            this.guna2GradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,11 +156,10 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(31)))));
-            this.guna2Panel2.Controls.Add(this.label10);
             this.guna2Panel2.Controls.Add(this.label9);
+            this.guna2Panel2.Controls.Add(this.protocol);
             this.guna2Panel2.Controls.Add(this.guna2ToggleSwitch1);
             this.guna2Panel2.Controls.Add(this.guna2CircleButton1);
-            this.guna2Panel2.Controls.Add(this.Disconnectbtn);
             this.guna2Panel2.Controls.Add(this.Connectbtn);
             this.guna2Panel2.Controls.Add(this.guna2VSeparator1);
             this.guna2Panel2.Controls.Add(this.servername);
@@ -186,29 +184,18 @@
             this.guna2Panel2.Size = new System.Drawing.Size(245, 708);
             this.guna2Panel2.TabIndex = 1;
             // 
-            // label10
+            // protocol
             // 
-            this.label10.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.label10, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label10.Location = new System.Drawing.Point(147, 449);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 24);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "TCP";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.label9, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label9.Location = new System.Drawing.Point(42, 449);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 24);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "UDP";
+            this.protocol.AutoSize = true;
+            this.protocol.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.protocol, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.protocol.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.protocol.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.protocol.Location = new System.Drawing.Point(79, 444);
+            this.protocol.Name = "protocol";
+            this.protocol.Size = new System.Drawing.Size(56, 30);
+            this.protocol.TabIndex = 26;
+            this.protocol.Text = "UDP";
             // 
             // guna2ToggleSwitch1
             // 
@@ -216,53 +203,54 @@
             this.guna2ToggleSwitch1.AutoRoundedCorners = true;
             this.guna2ToggleSwitch1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ToggleSwitch1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ToggleSwitch1.CheckedState.BorderRadius = 11;
+            this.guna2ToggleSwitch1.CheckedState.BorderRadius = 14;
             this.guna2ToggleSwitch1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.CheckedState.InnerBorderRadius = 7;
+            this.guna2ToggleSwitch1.CheckedState.InnerBorderRadius = 10;
             this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2Transition1.SetDecoration(this.guna2ToggleSwitch1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(99, 449);
+            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(147, 444);
             this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
-            this.guna2ToggleSwitch1.Size = new System.Drawing.Size(42, 24);
+            this.guna2ToggleSwitch1.Size = new System.Drawing.Size(46, 30);
             this.guna2ToggleSwitch1.TabIndex = 23;
             this.guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.BorderRadius = 11;
+            this.guna2ToggleSwitch1.UncheckedState.BorderRadius = 14;
             this.guna2ToggleSwitch1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.UncheckedState.InnerBorderRadius = 7;
+            this.guna2ToggleSwitch1.UncheckedState.InnerBorderRadius = 10;
             this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2ToggleSwitch1.UseTransparentBackground = true;
+            this.guna2ToggleSwitch1.CheckedChanged += new System.EventHandler(this.guna2ToggleSwitch1_CheckedChanged);
             // 
-            // Disconnectbtn
+            // guna2CircleButton1
             // 
-            this.Disconnectbtn.Animated = true;
-            this.Disconnectbtn.AutoRoundedCorners = true;
-            this.Disconnectbtn.BackColor = System.Drawing.Color.Transparent;
-            this.Disconnectbtn.BorderRadius = 20;
-            this.guna2Transition1.SetDecoration(this.Disconnectbtn, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Disconnectbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Disconnectbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Disconnectbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Disconnectbtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Disconnectbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Disconnectbtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(251)))));
-            this.Disconnectbtn.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
-            this.Disconnectbtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Disconnectbtn.ForeColor = System.Drawing.Color.White;
-            this.Disconnectbtn.Location = new System.Drawing.Point(41, 553);
-            this.Disconnectbtn.Margin = new System.Windows.Forms.Padding(2);
-            this.Disconnectbtn.Name = "Disconnectbtn";
-            this.Disconnectbtn.Size = new System.Drawing.Size(162, 42);
-            this.Disconnectbtn.TabIndex = 21;
-            this.Disconnectbtn.Text = "DISCONNECT";
+            this.guna2CircleButton1.Animated = true;
+            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.guna2CircleButton1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.Image = global::VPN.Properties.Resources.forward_150px;
+            this.guna2CircleButton1.ImageSize = new System.Drawing.Size(38, 38);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(195, 379);
+            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(26, 28);
+            this.guna2CircleButton1.TabIndex = 22;
+            this.guna2CircleButton1.UseTransparentBackground = true;
+            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
             // 
             // Connectbtn
             // 
             this.Connectbtn.Animated = true;
             this.Connectbtn.AutoRoundedCorners = true;
             this.Connectbtn.BackColor = System.Drawing.Color.Transparent;
-            this.Connectbtn.BorderRadius = 21;
+            this.Connectbtn.BorderRadius = 23;
             this.guna2Transition1.SetDecoration(this.Connectbtn, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Connectbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Connectbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -276,9 +264,9 @@
             this.Connectbtn.Location = new System.Drawing.Point(42, 496);
             this.Connectbtn.Margin = new System.Windows.Forms.Padding(2);
             this.Connectbtn.Name = "Connectbtn";
-            this.Connectbtn.Size = new System.Drawing.Size(161, 44);
+            this.Connectbtn.Size = new System.Drawing.Size(161, 48);
             this.Connectbtn.TabIndex = 20;
-            this.Connectbtn.Text = "CONNECT";
+            this.Connectbtn.Click += new System.EventHandler(this.Connectbtn_Click);
             // 
             // guna2VSeparator1
             // 
@@ -375,6 +363,33 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "IDENTITY";
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.guna2PictureBox2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(24, 379);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(36, 34);
+            this.guna2PictureBox2.TabIndex = 12;
+            this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(24, 275);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(36, 36);
+            this.guna2PictureBox1.TabIndex = 11;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -423,7 +438,7 @@
             this.guna2Transition1.SetDecoration(this.timeelapsed, Guna.UI2.AnimatorNS.DecorationType.None);
             this.timeelapsed.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeelapsed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
-            this.timeelapsed.Location = new System.Drawing.Point(89, 96);
+            this.timeelapsed.Location = new System.Drawing.Point(87, 96);
             this.timeelapsed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.timeelapsed.Name = "timeelapsed";
             this.timeelapsed.Size = new System.Drawing.Size(71, 30);
@@ -483,259 +498,159 @@
             this.pn_menu.TabIndex = 3;
             this.pn_menu.Visible = false;
             // 
-            // Netherlands
+            // guna2Button5
             // 
-            this.Netherlands.Animated = true;
-            this.Netherlands.AutoRoundedCorners = true;
-            this.Netherlands.BackColor = System.Drawing.Color.Transparent;
-            this.Netherlands.BorderRadius = 19;
-            this.Netherlands.CustomImages.Image = global::VPN.Properties.Resources.netherlands_150px;
-            this.Netherlands.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Netherlands.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
-            this.Netherlands.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Transition1.SetDecoration(this.Netherlands, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Netherlands.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Netherlands.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Netherlands.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Netherlands.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Netherlands.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
-            this.Netherlands.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Netherlands.ForeColor = System.Drawing.Color.Gray;
-            this.Netherlands.Location = new System.Drawing.Point(16, 64);
-            this.Netherlands.Name = "Netherlands";
-            this.Netherlands.Size = new System.Drawing.Size(181, 41);
-            this.Netherlands.TabIndex = 0;
-            this.Netherlands.Text = "Netherlands";
-            this.Netherlands.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Netherlands.TextOffset = new System.Drawing.Point(3, 0);
-            this.Netherlands.UseTransparentBackground = true;
-            this.Netherlands.Click += new System.EventHandler(this.Netherlands_Click_1);
+            this.guna2Button5.Animated = true;
+            this.guna2Button5.AutoRoundedCorners = true;
+            this.guna2Button5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button5.BorderRadius = 19;
+            this.guna2Button5.CustomImages.Image = global::VPN.Properties.Resources.sweden_150px;
+            this.guna2Button5.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button5.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
+            this.guna2Button5.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
+            this.guna2Transition1.SetDecoration(this.guna2Button5, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
+            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button5.ForeColor = System.Drawing.Color.Gray;
+            this.guna2Button5.Location = new System.Drawing.Point(16, 591);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.Size = new System.Drawing.Size(181, 41);
+            this.guna2Button5.TabIndex = 12;
+            this.guna2Button5.Text = "Sweden";
+            this.guna2Button5.TextOffset = new System.Drawing.Point(8, 0);
+            this.guna2Button5.UseTransparentBackground = true;
             // 
-            // guna2GradientPanel2
+            // guna2Button4
             // 
-            this.guna2GradientPanel2.AutoRoundedCorners = true;
-            this.guna2GradientPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientPanel2.BorderRadius = 65;
-            this.guna2GradientPanel2.Controls.Add(this.DR);
-            this.guna2GradientPanel2.Controls.Add(this.guna2PictureBox5);
-            this.guna2GradientPanel2.Controls.Add(this.label12);
-            this.guna2Transition1.SetDecoration(this.guna2GradientPanel2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(64)))));
-            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(31)))));
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(686, 553);
-            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(248, 133);
-            this.guna2GradientPanel2.TabIndex = 5;
-            this.guna2GradientPanel2.UseTransparentBackground = true;
+            this.guna2Button4.Animated = true;
+            this.guna2Button4.AutoRoundedCorners = true;
+            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button4.BorderRadius = 19;
+            this.guna2Button4.CustomImages.Image = global::VPN.Properties.Resources.icons8_italy_100;
+            this.guna2Button4.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button4.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
+            this.guna2Button4.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
+            this.guna2Transition1.SetDecoration(this.guna2Button4, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
+            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button4.ForeColor = System.Drawing.Color.Gray;
+            this.guna2Button4.Location = new System.Drawing.Point(16, 546);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.Size = new System.Drawing.Size(181, 41);
+            this.guna2Button4.TabIndex = 11;
+            this.guna2Button4.Text = "Italy";
+            this.guna2Button4.TextOffset = new System.Drawing.Point(-5, 0);
+            this.guna2Button4.UseTransparentBackground = true;
             // 
-            // label12
+            // guna2Button3
             // 
-            this.label12.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.label12, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.SeaShell;
-            this.label12.Location = new System.Drawing.Point(96, 38);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(128, 16);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "DATA RECEIVED";
+            this.guna2Button3.Animated = true;
+            this.guna2Button3.AutoRoundedCorners = true;
+            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button3.BorderRadius = 19;
+            this.guna2Button3.CustomImages.Image = global::VPN.Properties.Resources.france_150px;
+            this.guna2Button3.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button3.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
+            this.guna2Button3.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
+            this.guna2Transition1.SetDecoration(this.guna2Button3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button3.ForeColor = System.Drawing.Color.Gray;
+            this.guna2Button3.Location = new System.Drawing.Point(16, 499);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.Size = new System.Drawing.Size(181, 41);
+            this.guna2Button3.TabIndex = 10;
+            this.guna2Button3.Text = "France";
+            this.guna2Button3.TextOffset = new System.Drawing.Point(5, 0);
+            this.guna2Button3.UseTransparentBackground = true;
             // 
-            // guna2GradientPanel3
+            // guna2Button2
             // 
-            this.guna2GradientPanel3.AutoRoundedCorners = true;
-            this.guna2GradientPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientPanel3.BorderRadius = 65;
-            this.guna2GradientPanel3.Controls.Add(this.DU);
-            this.guna2GradientPanel3.Controls.Add(this.guna2PictureBox7);
-            this.guna2GradientPanel3.Controls.Add(this.guna2PictureBox3);
-            this.guna2GradientPanel3.Controls.Add(this.label13);
-            this.guna2Transition1.SetDecoration(this.guna2GradientPanel3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(31)))));
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(333, 553);
-            this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(254, 133);
-            this.guna2GradientPanel3.TabIndex = 6;
-            this.guna2GradientPanel3.UseTransparentBackground = true;
+            this.guna2Button2.Animated = true;
+            this.guna2Button2.AutoRoundedCorners = true;
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderRadius = 19;
+            this.guna2Button2.CustomImages.Image = global::VPN.Properties.Resources.icons8_switzerland_100;
+            this.guna2Button2.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button2.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
+            this.guna2Button2.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
+            this.guna2Transition1.SetDecoration(this.guna2Button2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.Gray;
+            this.guna2Button2.Location = new System.Drawing.Point(16, 452);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(181, 41);
+            this.guna2Button2.TabIndex = 9;
+            this.guna2Button2.Text = "Switzerland";
+            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.guna2Button2.TextOffset = new System.Drawing.Point(-3, 0);
+            this.guna2Button2.UseTransparentBackground = true;
             // 
-            // label13
+            // guna2Button1
             // 
-            this.label13.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.label13, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label13.Location = new System.Drawing.Point(79, 38);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(147, 16);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "TOTAL DATA USED";
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 19;
+            this.guna2Button1.CustomImages.Image = global::VPN.Properties.Resources.icons8_china_100;
+            this.guna2Button1.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
+            this.guna2Button1.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
+            this.guna2Transition1.SetDecoration(this.guna2Button1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Gray;
+            this.guna2Button1.Location = new System.Drawing.Point(16, 405);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(181, 41);
+            this.guna2Button1.TabIndex = 8;
+            this.guna2Button1.Text = "China";
+            this.guna2Button1.UseTransparentBackground = true;
             // 
-            // guna2Transition1
+            // label18
             // 
-            this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
-            this.guna2Transition1.Cursor = null;
-            animation11.AnimateOnlyDifferences = true;
-            animation11.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation11.BlindCoeff")));
-            animation11.LeafCoeff = 0F;
-            animation11.MaxTime = 1F;
-            animation11.MinTime = 0F;
-            animation11.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation11.MosaicCoeff")));
-            animation11.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation11.MosaicShift")));
-            animation11.MosaicSize = 0;
-            animation11.Padding = new System.Windows.Forms.Padding(0);
-            animation11.RotateCoeff = 0F;
-            animation11.RotateLimit = 0F;
-            animation11.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation11.ScaleCoeff")));
-            animation11.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation11.SlideCoeff")));
-            animation11.TimeCoeff = 0F;
-            animation11.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation11;
+            this.label18.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.label18, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label18.Location = new System.Drawing.Point(14, 367);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(183, 20);
+            this.label18.TabIndex = 7;
+            this.label18.Text = "PREMIUM SERVERS";
             // 
-            // guna2GradientPanel1
+            // label17
             // 
-            this.guna2GradientPanel1.AutoRoundedCorners = true;
-            this.guna2GradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientPanel1.BorderRadius = 65;
-            this.guna2GradientPanel1.Controls.Add(this.DS);
-            this.guna2GradientPanel1.Controls.Add(this.guna2PictureBox6);
-            this.guna2GradientPanel1.Controls.Add(this.label11);
-            this.guna2Transition1.SetDecoration(this.guna2GradientPanel1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(46)))), ((int)(((byte)(60)))));
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(31)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(1017, 553);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(251, 133);
-            this.guna2GradientPanel1.TabIndex = 4;
-            this.guna2GradientPanel1.UseTransparentBackground = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.label11, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label11.Location = new System.Drawing.Point(103, 38);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(93, 16);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "DATA SENT";
-            // 
-            // DU
-            // 
-            this.DU.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.DU, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.DU.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DU.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DU.Location = new System.Drawing.Point(118, 65);
-            this.DU.Name = "DU";
-            this.DU.Size = new System.Drawing.Size(72, 29);
-            this.DU.TabIndex = 10;
-            this.DU.Text = "0 MB";
-            // 
-            // DR
-            // 
-            this.DR.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.DR, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.DR.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DR.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DR.Location = new System.Drawing.Point(114, 65);
-            this.DR.Name = "DR";
-            this.DR.Size = new System.Drawing.Size(72, 29);
-            this.DR.TabIndex = 11;
-            this.DR.Text = "0 MB";
-            // 
-            // DS
-            // 
-            this.DS.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.DS, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.DS.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DS.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DS.Location = new System.Drawing.Point(112, 61);
-            this.DS.Name = "DS";
-            this.DS.Size = new System.Drawing.Size(72, 29);
-            this.DS.TabIndex = 11;
-            this.DS.Text = "0 MB";
-            // 
-            // USA
-            // 
-            this.USA.Animated = true;
-            this.USA.AutoRoundedCorners = true;
-            this.USA.BackColor = System.Drawing.Color.Transparent;
-            this.USA.BorderRadius = 19;
-            this.USA.CustomImages.Image = global::VPN.Properties.Resources.usa_150px;
-            this.USA.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.USA.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
-            this.USA.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Transition1.SetDecoration(this.USA, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.USA.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.USA.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.USA.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.USA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.USA.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
-            this.USA.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.USA.ForeColor = System.Drawing.Color.Gray;
-            this.USA.Location = new System.Drawing.Point(16, 111);
-            this.USA.Name = "USA";
-            this.USA.Size = new System.Drawing.Size(181, 41);
-            this.USA.TabIndex = 1;
-            this.USA.Text = "USA";
-            this.USA.UseTransparentBackground = true;
-            this.USA.Click += new System.EventHandler(this.USA_Click);
-            // 
-            // UK
-            // 
-            this.UK.Animated = true;
-            this.UK.AutoRoundedCorners = true;
-            this.UK.BackColor = System.Drawing.Color.Transparent;
-            this.UK.BorderRadius = 19;
-            this.UK.CustomImages.Image = global::VPN.Properties.Resources.icons8_great_britain_100;
-            this.UK.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.UK.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
-            this.UK.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Transition1.SetDecoration(this.UK, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.UK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.UK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.UK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.UK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.UK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
-            this.UK.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UK.ForeColor = System.Drawing.Color.Gray;
-            this.UK.Location = new System.Drawing.Point(16, 205);
-            this.UK.Name = "UK";
-            this.UK.Size = new System.Drawing.Size(181, 41);
-            this.UK.TabIndex = 3;
-            this.UK.Text = "UK";
-            this.UK.TextOffset = new System.Drawing.Point(-2, 0);
-            this.UK.UseTransparentBackground = true;
-            this.UK.Click += new System.EventHandler(this.UK_Click);
-            // 
-            // Singapore
-            // 
-            this.Singapore.Animated = true;
-            this.Singapore.AutoRoundedCorners = true;
-            this.Singapore.BackColor = System.Drawing.Color.Transparent;
-            this.Singapore.BorderRadius = 19;
-            this.Singapore.CustomImages.Image = global::VPN.Properties.Resources.icons8_singapore_100;
-            this.Singapore.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Singapore.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
-            this.Singapore.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Transition1.SetDecoration(this.Singapore, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Singapore.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Singapore.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Singapore.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Singapore.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Singapore.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
-            this.Singapore.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Singapore.ForeColor = System.Drawing.Color.Gray;
-            this.Singapore.Location = new System.Drawing.Point(16, 158);
-            this.Singapore.Name = "Singapore";
-            this.Singapore.Size = new System.Drawing.Size(181, 41);
-            this.Singapore.TabIndex = 2;
-            this.Singapore.Text = "Singapore";
-            this.Singapore.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Singapore.TextOffset = new System.Drawing.Point(-2, 0);
-            this.Singapore.UseTransparentBackground = true;
-            this.Singapore.Click += new System.EventHandler(this.Singapore_Click);
+            this.label17.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.label17, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label17.Location = new System.Drawing.Point(32, 28);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(148, 20);
+            this.label17.TabIndex = 6;
+            this.label17.Text = "FREE SERVERS";
             // 
             // Australia
             // 
@@ -792,159 +707,143 @@
             this.Japan.UseTransparentBackground = true;
             this.Japan.Click += new System.EventHandler(this.Japan_Click);
             // 
-            // label17
+            // UK
             // 
-            this.label17.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.label17, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label17.Location = new System.Drawing.Point(32, 28);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(148, 20);
-            this.label17.TabIndex = 6;
-            this.label17.Text = "FREE SERVERS";
+            this.UK.Animated = true;
+            this.UK.AutoRoundedCorners = true;
+            this.UK.BackColor = System.Drawing.Color.Transparent;
+            this.UK.BorderRadius = 19;
+            this.UK.CustomImages.Image = global::VPN.Properties.Resources.icons8_great_britain_100;
+            this.UK.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.UK.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
+            this.UK.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
+            this.guna2Transition1.SetDecoration(this.UK, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.UK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.UK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.UK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.UK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.UK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
+            this.UK.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UK.ForeColor = System.Drawing.Color.Gray;
+            this.UK.Location = new System.Drawing.Point(16, 205);
+            this.UK.Name = "UK";
+            this.UK.Size = new System.Drawing.Size(181, 41);
+            this.UK.TabIndex = 3;
+            this.UK.Text = "UK";
+            this.UK.TextOffset = new System.Drawing.Point(-2, 0);
+            this.UK.UseTransparentBackground = true;
+            this.UK.Click += new System.EventHandler(this.UK_Click);
             // 
-            // label18
+            // Singapore
             // 
-            this.label18.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.label18, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label18.Location = new System.Drawing.Point(14, 367);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(183, 20);
-            this.label18.TabIndex = 7;
-            this.label18.Text = "PREMIUM SERVERS";
+            this.Singapore.Animated = true;
+            this.Singapore.AutoRoundedCorners = true;
+            this.Singapore.BackColor = System.Drawing.Color.Transparent;
+            this.Singapore.BorderRadius = 19;
+            this.Singapore.CustomImages.Image = global::VPN.Properties.Resources.icons8_singapore_100;
+            this.Singapore.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Singapore.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
+            this.Singapore.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
+            this.guna2Transition1.SetDecoration(this.Singapore, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.Singapore.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Singapore.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Singapore.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Singapore.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Singapore.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
+            this.Singapore.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Singapore.ForeColor = System.Drawing.Color.Gray;
+            this.Singapore.Location = new System.Drawing.Point(16, 158);
+            this.Singapore.Name = "Singapore";
+            this.Singapore.Size = new System.Drawing.Size(181, 41);
+            this.Singapore.TabIndex = 2;
+            this.Singapore.Text = "Singapore";
+            this.Singapore.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Singapore.TextOffset = new System.Drawing.Point(-2, 0);
+            this.Singapore.UseTransparentBackground = true;
+            this.Singapore.Click += new System.EventHandler(this.Singapore_Click);
             // 
-            // guna2Button1
+            // USA
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 19;
-            this.guna2Button1.CustomImages.Image = global::VPN.Properties.Resources.icons8_china_100;
-            this.guna2Button1.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
-            this.guna2Button1.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Transition1.SetDecoration(this.guna2Button1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Gray;
-            this.guna2Button1.Location = new System.Drawing.Point(16, 405);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(181, 41);
-            this.guna2Button1.TabIndex = 8;
-            this.guna2Button1.Text = "China";
-            this.guna2Button1.UseTransparentBackground = true;
+            this.USA.Animated = true;
+            this.USA.AutoRoundedCorners = true;
+            this.USA.BackColor = System.Drawing.Color.Transparent;
+            this.USA.BorderRadius = 19;
+            this.USA.CustomImages.Image = global::VPN.Properties.Resources.usa_150px;
+            this.USA.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.USA.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
+            this.USA.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
+            this.guna2Transition1.SetDecoration(this.USA, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.USA.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.USA.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.USA.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.USA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.USA.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
+            this.USA.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.USA.ForeColor = System.Drawing.Color.Gray;
+            this.USA.Location = new System.Drawing.Point(16, 111);
+            this.USA.Name = "USA";
+            this.USA.Size = new System.Drawing.Size(181, 41);
+            this.USA.TabIndex = 1;
+            this.USA.Text = "USA";
+            this.USA.UseTransparentBackground = true;
+            this.USA.Click += new System.EventHandler(this.USA_Click);
             // 
-            // guna2Button2
+            // Netherlands
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 19;
-            this.guna2Button2.CustomImages.Image = global::VPN.Properties.Resources.icons8_switzerland_100;
-            this.guna2Button2.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
-            this.guna2Button2.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Transition1.SetDecoration(this.guna2Button2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.Gray;
-            this.guna2Button2.Location = new System.Drawing.Point(16, 452);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(181, 41);
-            this.guna2Button2.TabIndex = 9;
-            this.guna2Button2.Text = "Switzerland";
-            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button2.TextOffset = new System.Drawing.Point(-3, 0);
-            this.guna2Button2.UseTransparentBackground = true;
+            this.Netherlands.Animated = true;
+            this.Netherlands.AutoRoundedCorners = true;
+            this.Netherlands.BackColor = System.Drawing.Color.Transparent;
+            this.Netherlands.BorderRadius = 19;
+            this.Netherlands.CustomImages.Image = global::VPN.Properties.Resources.netherlands_150px;
+            this.Netherlands.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Netherlands.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
+            this.Netherlands.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
+            this.guna2Transition1.SetDecoration(this.Netherlands, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.Netherlands.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Netherlands.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Netherlands.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Netherlands.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Netherlands.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
+            this.Netherlands.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Netherlands.ForeColor = System.Drawing.Color.Gray;
+            this.Netherlands.Location = new System.Drawing.Point(16, 64);
+            this.Netherlands.Name = "Netherlands";
+            this.Netherlands.Size = new System.Drawing.Size(181, 41);
+            this.Netherlands.TabIndex = 0;
+            this.Netherlands.Text = "Netherlands";
+            this.Netherlands.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Netherlands.TextOffset = new System.Drawing.Point(3, 0);
+            this.Netherlands.UseTransparentBackground = true;
+            this.Netherlands.Click += new System.EventHandler(this.Netherlands_Click_1);
             // 
-            // guna2Button3
+            // guna2GradientPanel2
             // 
-            this.guna2Button3.Animated = true;
-            this.guna2Button3.AutoRoundedCorners = true;
-            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderRadius = 19;
-            this.guna2Button3.CustomImages.Image = global::VPN.Properties.Resources.france_150px;
-            this.guna2Button3.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
-            this.guna2Button3.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Transition1.SetDecoration(this.guna2Button3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.Gray;
-            this.guna2Button3.Location = new System.Drawing.Point(16, 499);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(181, 41);
-            this.guna2Button3.TabIndex = 10;
-            this.guna2Button3.Text = "France";
-            this.guna2Button3.TextOffset = new System.Drawing.Point(5, 0);
-            this.guna2Button3.UseTransparentBackground = true;
+            this.guna2GradientPanel2.AutoRoundedCorners = true;
+            this.guna2GradientPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientPanel2.BorderRadius = 65;
+            this.guna2GradientPanel2.Controls.Add(this.DR);
+            this.guna2GradientPanel2.Controls.Add(this.guna2PictureBox5);
+            this.guna2GradientPanel2.Controls.Add(this.label12);
+            this.guna2Transition1.SetDecoration(this.guna2GradientPanel2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(64)))));
+            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(31)))));
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(686, 553);
+            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(248, 133);
+            this.guna2GradientPanel2.TabIndex = 5;
+            this.guna2GradientPanel2.UseTransparentBackground = true;
             // 
-            // guna2Button4
+            // DR
             // 
-            this.guna2Button4.Animated = true;
-            this.guna2Button4.AutoRoundedCorners = true;
-            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.BorderRadius = 19;
-            this.guna2Button4.CustomImages.Image = global::VPN.Properties.Resources.icons8_italy_100;
-            this.guna2Button4.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button4.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
-            this.guna2Button4.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Transition1.SetDecoration(this.guna2Button4, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.Gray;
-            this.guna2Button4.Location = new System.Drawing.Point(16, 546);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(181, 41);
-            this.guna2Button4.TabIndex = 11;
-            this.guna2Button4.Text = "Italy";
-            this.guna2Button4.TextOffset = new System.Drawing.Point(-5, 0);
-            this.guna2Button4.UseTransparentBackground = true;
-            // 
-            // guna2Button5
-            // 
-            this.guna2Button5.Animated = true;
-            this.guna2Button5.AutoRoundedCorners = true;
-            this.guna2Button5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.BorderRadius = 19;
-            this.guna2Button5.CustomImages.Image = global::VPN.Properties.Resources.sweden_150px;
-            this.guna2Button5.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button5.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
-            this.guna2Button5.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Transition1.SetDecoration(this.guna2Button5, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.Gray;
-            this.guna2Button5.Location = new System.Drawing.Point(16, 591);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(181, 41);
-            this.guna2Button5.TabIndex = 12;
-            this.guna2Button5.Text = "Sweden";
-            this.guna2Button5.TextOffset = new System.Drawing.Point(8, 0);
-            this.guna2Button5.UseTransparentBackground = true;
+            this.DR.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.DR, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.DR.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DR.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DR.Location = new System.Drawing.Point(114, 65);
+            this.DR.Name = "DR";
+            this.DR.Size = new System.Drawing.Size(72, 29);
+            this.DR.TabIndex = 11;
+            this.DR.Text = "0 MB";
             // 
             // guna2PictureBox5
             // 
@@ -958,67 +857,47 @@
             this.guna2PictureBox5.TabIndex = 9;
             this.guna2PictureBox5.TabStop = false;
             // 
-            // guna2PictureBox6
+            // label12
             // 
-            this.guna2Transition1.SetDecoration(this.guna2PictureBox6, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox6.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox6.Image = global::VPN.Properties.Resources.icons8_upload_to_cloud_501;
-            this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(40, 42);
-            this.guna2PictureBox6.Name = "guna2PictureBox6";
-            this.guna2PictureBox6.Size = new System.Drawing.Size(57, 52);
-            this.guna2PictureBox6.TabIndex = 9;
-            this.guna2PictureBox6.TabStop = false;
+            this.label12.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.label12, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.SeaShell;
+            this.label12.Location = new System.Drawing.Point(96, 38);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(128, 16);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "DATA RECEIVED";
             // 
-            // guna2CircleButton1
+            // guna2GradientPanel3
             // 
-            this.guna2CircleButton1.Animated = true;
-            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Transition1.SetDecoration(this.guna2CircleButton1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Image = global::VPN.Properties.Resources.forward_150px;
-            this.guna2CircleButton1.ImageSize = new System.Drawing.Size(38, 38);
-            this.guna2CircleButton1.Location = new System.Drawing.Point(195, 379);
-            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(26, 28);
-            this.guna2CircleButton1.TabIndex = 22;
-            this.guna2CircleButton1.UseTransparentBackground = true;
-            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
+            this.guna2GradientPanel3.AutoRoundedCorners = true;
+            this.guna2GradientPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientPanel3.BorderRadius = 65;
+            this.guna2GradientPanel3.Controls.Add(this.DU);
+            this.guna2GradientPanel3.Controls.Add(this.guna2PictureBox7);
+            this.guna2GradientPanel3.Controls.Add(this.guna2PictureBox3);
+            this.guna2GradientPanel3.Controls.Add(this.label13);
+            this.guna2Transition1.SetDecoration(this.guna2GradientPanel3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(31)))));
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(333, 553);
+            this.guna2GradientPanel3.Name = "guna2GradientPanel3";
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(254, 133);
+            this.guna2GradientPanel3.TabIndex = 6;
+            this.guna2GradientPanel3.UseTransparentBackground = true;
             // 
-            // guna2PictureBox2
+            // DU
             // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Transition1.SetDecoration(this.guna2PictureBox2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(24, 379);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(36, 34);
-            this.guna2PictureBox2.TabIndex = 12;
-            this.guna2PictureBox2.TabStop = false;
-            this.guna2PictureBox2.UseTransparentBackground = true;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Transition1.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(24, 275);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(36, 36);
-            this.guna2PictureBox1.TabIndex = 11;
-            this.guna2PictureBox1.TabStop = false;
+            this.DU.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.DU, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.DU.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DU.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DU.Location = new System.Drawing.Point(118, 65);
+            this.DU.Name = "DU";
+            this.DU.Size = new System.Drawing.Size(72, 29);
+            this.DU.TabIndex = 10;
+            this.DU.Text = "0 MB";
             // 
             // guna2PictureBox7
             // 
@@ -1042,6 +921,92 @@
             this.guna2PictureBox3.Size = new System.Drawing.Size(35, 36);
             this.guna2PictureBox3.TabIndex = 8;
             this.guna2PictureBox3.TabStop = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.label13, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label13.Location = new System.Drawing.Point(79, 38);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(147, 16);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "TOTAL DATA USED";
+            // 
+            // guna2Transition1
+            // 
+            this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
+            this.guna2Transition1.Cursor = null;
+            animation6.AnimateOnlyDifferences = true;
+            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
+            animation6.LeafCoeff = 0F;
+            animation6.MaxTime = 1F;
+            animation6.MinTime = 0F;
+            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
+            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
+            animation6.MosaicSize = 0;
+            animation6.Padding = new System.Windows.Forms.Padding(0);
+            animation6.RotateCoeff = 0F;
+            animation6.RotateLimit = 0F;
+            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
+            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
+            animation6.TimeCoeff = 0F;
+            animation6.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation6;
+            // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.AutoRoundedCorners = true;
+            this.guna2GradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientPanel1.BorderRadius = 65;
+            this.guna2GradientPanel1.Controls.Add(this.DS);
+            this.guna2GradientPanel1.Controls.Add(this.guna2PictureBox6);
+            this.guna2GradientPanel1.Controls.Add(this.label11);
+            this.guna2Transition1.SetDecoration(this.guna2GradientPanel1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(46)))), ((int)(((byte)(60)))));
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(31)))));
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(1017, 553);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(251, 133);
+            this.guna2GradientPanel1.TabIndex = 4;
+            this.guna2GradientPanel1.UseTransparentBackground = true;
+            // 
+            // DS
+            // 
+            this.DS.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.DS, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.DS.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DS.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DS.Location = new System.Drawing.Point(112, 61);
+            this.DS.Name = "DS";
+            this.DS.Size = new System.Drawing.Size(72, 29);
+            this.DS.TabIndex = 11;
+            this.DS.Text = "0 MB";
+            // 
+            // guna2PictureBox6
+            // 
+            this.guna2Transition1.SetDecoration(this.guna2PictureBox6, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2PictureBox6.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox6.Image = global::VPN.Properties.Resources.icons8_upload_to_cloud_501;
+            this.guna2PictureBox6.ImageRotate = 0F;
+            this.guna2PictureBox6.Location = new System.Drawing.Point(40, 42);
+            this.guna2PictureBox6.Name = "guna2PictureBox6";
+            this.guna2PictureBox6.Size = new System.Drawing.Size(57, 52);
+            this.guna2PictureBox6.TabIndex = 9;
+            this.guna2PictureBox6.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.label11, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label11.Location = new System.Drawing.Point(103, 38);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(93, 16);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "DATA SENT";
             // 
             // guna2PictureBox4
             // 
@@ -1100,6 +1065,20 @@
             this.guna2ImageButton1.TabIndex = 15;
             this.guna2ImageButton1.UseTransparentBackground = true;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.label9, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(73, 432);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(69, 15);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "PROTOCOL";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1124,20 +1103,20 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pn_menu.ResumeLayout(false);
             this.pn_menu.PerformLayout();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
-            this.guna2GradientPanel1.ResumeLayout(false);
-            this.guna2GradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            this.guna2GradientPanel1.ResumeLayout(false);
+            this.guna2GradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1167,7 +1146,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
-        private Guna.UI2.WinForms.Guna2GradientButton Disconnectbtn;
         private Guna.UI2.WinForms.Guna2GradientButton Connectbtn;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2Panel pn_menu;
@@ -1175,8 +1153,6 @@
         private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
         private Guna.UI2.WinForms.Guna2Button Netherlands;
         private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
@@ -1205,6 +1181,8 @@
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label username;
+        private System.Windows.Forms.Label protocol;
+        private System.Windows.Forms.Label label9;
     }
 }
 

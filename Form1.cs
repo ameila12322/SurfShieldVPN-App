@@ -25,10 +25,35 @@ namespace VPN
             else
                 guna2Transition1.HideSync(pn_menu);
         }
-
-        private void Netherlands_Click(object sender, EventArgs e)
+          
+        private void Netherlands_Click_1(object sender, EventArgs e)
         {
             servername.Text = "Netherlands";
+        }
+
+        private void USA_Click(object sender, EventArgs e)
+        {
+            servername.Text = "USA";
+        }
+
+        private void Singapore_Click(object sender, EventArgs e)
+        {
+            servername.Text = "Singapore";
+        }
+
+        private void UK_Click(object sender, EventArgs e)
+        {
+            servername.Text = "UK";
+        }
+
+        private void Japan_Click(object sender, EventArgs e)
+        {
+            servername.Text = "Japan";
+        }
+
+        private void Australia_Click(object sender, EventArgs e)
+        {
+            servername.Text = "Australia";
         }
     }
 }

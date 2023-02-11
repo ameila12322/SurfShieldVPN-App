@@ -102,5 +102,50 @@
   <ItemGroup>
     <None Include="Resources\netherlands_150px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-big-data-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cloud-download-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-upload-to-cloud-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usa_150px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sweden_150px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\france_150px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\australia_150px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-singapore-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-great-britain-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag-g78465441c_640.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Japan_Flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-china-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-switzerland-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-italy-100.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation4 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -37,6 +37,7 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblsec = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.protocol = new System.Windows.Forms.Label();
             this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
@@ -54,7 +55,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.timeelapsed = new System.Windows.Forms.Label();
+            this.lblmin = new System.Windows.Forms.Label();
             this.guna2RadialGauge1 = new Guna.UI2.WinForms.Guna2RadialGauge();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.pn_menu = new Guna.UI2.WinForms.Guna2Panel();
@@ -89,6 +90,8 @@
             this.username = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -156,6 +159,8 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(31)))));
+            this.guna2Panel2.Controls.Add(this.label5);
+            this.guna2Panel2.Controls.Add(this.lblsec);
             this.guna2Panel2.Controls.Add(this.label9);
             this.guna2Panel2.Controls.Add(this.protocol);
             this.guna2Panel2.Controls.Add(this.guna2ToggleSwitch1);
@@ -173,7 +178,7 @@
             this.guna2Panel2.Controls.Add(this.label3);
             this.guna2Panel2.Controls.Add(this.label2);
             this.guna2Panel2.Controls.Add(this.label1);
-            this.guna2Panel2.Controls.Add(this.timeelapsed);
+            this.guna2Panel2.Controls.Add(this.lblmin);
             this.guna2Panel2.Controls.Add(this.guna2RadialGauge1);
             this.guna2Transition1.SetDecoration(this.guna2Panel2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -183,6 +188,19 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(281, 708);
             this.guna2Panel2.TabIndex = 1;
+            // 
+            // lblsec
+            // 
+            this.lblsec.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.lblsec, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblsec.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
+            this.lblsec.Location = new System.Drawing.Point(145, 97);
+            this.lblsec.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblsec.Name = "lblsec";
+            this.lblsec.Size = new System.Drawing.Size(39, 30);
+            this.lblsec.TabIndex = 28;
+            this.lblsec.Text = "00";
             // 
             // label9
             // 
@@ -446,18 +464,18 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "TIME ELAPSED";
             // 
-            // timeelapsed
+            // lblmin
             // 
-            this.timeelapsed.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.timeelapsed, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.timeelapsed.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeelapsed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
-            this.timeelapsed.Location = new System.Drawing.Point(102, 96);
-            this.timeelapsed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.timeelapsed.Name = "timeelapsed";
-            this.timeelapsed.Size = new System.Drawing.Size(71, 30);
-            this.timeelapsed.TabIndex = 2;
-            this.timeelapsed.Text = "00:00";
+            this.lblmin.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.lblmin, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblmin.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
+            this.lblmin.Location = new System.Drawing.Point(111, 97);
+            this.lblmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblmin.Name = "lblmin";
+            this.lblmin.Size = new System.Drawing.Size(39, 30);
+            this.lblmin.TabIndex = 2;
+            this.lblmin.Text = "00";
             // 
             // guna2RadialGauge1
             // 
@@ -952,22 +970,22 @@
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.guna2Transition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation1;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation4;
             // 
             // guna2GradientPanel1
             // 
@@ -1079,6 +1097,25 @@
             this.guna2ImageButton1.TabIndex = 15;
             this.guna2ImageButton1.UseTransparentBackground = true;
             // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 10;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.label5, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
+            this.label5.Location = new System.Drawing.Point(131, 97);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(19, 30);
+            this.label5.TabIndex = 29;
+            this.label5.Text = ":";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1135,7 +1172,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label timeelapsed;
+        private System.Windows.Forms.Label lblmin;
         private Guna.UI2.WinForms.Guna2RadialGauge guna2RadialGauge1;
         private System.Windows.Forms.Label servername;
         private System.Windows.Forms.Label label8;
@@ -1184,6 +1221,9 @@
         private System.Windows.Forms.Label username;
         private System.Windows.Forms.Label protocol;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label lblsec;
+        private System.Windows.Forms.Label label5;
     }
 }
 

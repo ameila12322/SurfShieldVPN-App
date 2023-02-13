@@ -16,19 +16,34 @@ using System.Net.Sockets;
 using Newtonsoft.Json;
 using System.Text.RegularExpressions;
 using System.Threading;
+using System.IO;
+using System.Timers;
 
 namespace VPN
 {
     public partial class Form1 : Form
     {
+        private string lblloc;
+        private string lblip;
         private bool buttonClicked = false;
+        int timeSec, timeMin, timeCs;
+        bool isActive;
         public Form1()
         {
             InitializeComponent();
             Connectbtn.Text = "Connect";
             Connectbtn.Font = new Font("Segoe UI", 16, FontStyle.Bold);
+            localip();
+
+
+
         }
 
+        private void setlocalipdetails()
+        {
+            labelIPAddress.Text = lblip;
+            labelLocation.Text = lblloc;
+        }
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
             if (!pn_menu.Visible)
@@ -69,11 +84,10 @@ namespace VPN
 
         private async void Connectbtn_Click(object sender, EventArgs e)
         {
-           
 
             if (!buttonClicked)
             {
-                
+                isActive = true;
 
                 if (servername.Text == "Netherlands")
                 {
@@ -88,11 +102,12 @@ namespace VPN
                         startInfo.Verb = "runas";
                         process.StartInfo = startInfo;
                         process.Start();
-                        await Task.Delay(4000);
+                        await Task.Delay(9000);
+                        ExternalIPlocation();
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
                         MessageBox.Show("You've connected to server with udp");
-                        ExternalIPlocation();
+
                         Connectbtn.Enabled = true;
 
                     }
@@ -107,7 +122,7 @@ namespace VPN
                         startInfo.Verb = "runas";
                         process.StartInfo = startInfo;
                         process.Start();
-                        await Task.Delay(4000);
+                        await Task.Delay(9000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
                         MessageBox.Show("You've connected to server with tcp");
@@ -128,7 +143,7 @@ namespace VPN
                         startInfo.Verb = "runas";
                         process.StartInfo = startInfo;
                         process.Start();
-                        await Task.Delay(4000);
+                        await Task.Delay(6000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
                         MessageBox.Show("You've connected to server with udp");
@@ -148,7 +163,7 @@ namespace VPN
                         startInfo.Verb = "runas";
                         process.StartInfo = startInfo;
                         process.Start();
-                        await Task.Delay(4000);
+                        await Task.Delay(6000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
                         MessageBox.Show("You've connected to server with tcp");
@@ -171,7 +186,7 @@ namespace VPN
                         startInfo.Verb = "runas";
                         process.StartInfo = startInfo;
                         process.Start();
-                        await Task.Delay(4000);
+                        await Task.Delay(6000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
                         MessageBox.Show("You've connected to server with udp");
@@ -191,7 +206,7 @@ namespace VPN
                         startInfo.Verb = "runas";
                         process.StartInfo = startInfo;
                         process.Start();
-                        await Task.Delay(4000);
+                        await Task.Delay(6000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
                         MessageBox.Show("You've connected to server with tcp");
@@ -214,7 +229,7 @@ namespace VPN
                         startInfo.Verb = "runas";
                         process.StartInfo = startInfo;
                         process.Start();
-                        await Task.Delay(4000);
+                        await Task.Delay(6000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
                         MessageBox.Show("You've connected to server with udp");
@@ -234,7 +249,7 @@ namespace VPN
                         startInfo.Verb = "runas";
                         process.StartInfo = startInfo;
                         process.Start();
-                        await Task.Delay(4000);
+                        await Task.Delay(6000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
                         MessageBox.Show("You've connected to server with tcp");
@@ -257,7 +272,7 @@ namespace VPN
                         startInfo.Verb = "runas";
                         process.StartInfo = startInfo;
                         process.Start();
-                        await Task.Delay(4000);
+                        await Task.Delay(6000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
                         MessageBox.Show("You've connected to server with udp");
@@ -277,7 +292,7 @@ namespace VPN
                         startInfo.Verb = "runas";
                         process.StartInfo = startInfo;
                         process.Start();
-                        await Task.Delay(4000);
+                        await Task.Delay(6000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
                         MessageBox.Show("You've connected to server with tcp");
@@ -300,7 +315,7 @@ namespace VPN
                         startInfo.Verb = "runas";
                         process.StartInfo = startInfo;
                         process.Start();
-                        await Task.Delay(4000);
+                        await Task.Delay(6000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
                         MessageBox.Show("You've connected to server with udp");
@@ -320,7 +335,7 @@ namespace VPN
                         startInfo.Verb = "runas";
                         process.StartInfo = startInfo;
                         process.Start();
-                        await Task.Delay(4000);
+                        await Task.Delay(6000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
                         MessageBox.Show("You've connected to server with tcp");
@@ -330,7 +345,7 @@ namespace VPN
                     }
                 }
 
-            } 
+            }
 
 
             else
@@ -344,17 +359,30 @@ namespace VPN
                     CreateNoWindow = true,
                     UseShellExecute = false
                 }).WaitForExit();
-                await Task.Delay(1000);
+
+                await Task.Delay(2000);
                 Connectbtn.Text = "Connect";
                 buttonClicked = false;
                 Connectbtn.Enabled = true;
+                setlocalipdetails();
+                isActive = false;
+                ResetTime();
+
+
+
             }
 
-            
+
 
         }
 
 
+        private void ResetTime()
+        {
+            timeMin = 0;
+            timeCs = 0;
+            timeSec = 0;
+        }
 
         private void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)
         {
@@ -370,9 +398,57 @@ namespace VPN
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            
+            timeSec = 0;
+            timeCs = 0;
+            timeMin = 0;
+            isActive = false;
+            ResetTime();
         }
 
+        private string GetPublicIpAddress()
+        {
+            var request = (HttpWebRequest)WebRequest.Create("http://ifconfig.me");
+
+            request.UserAgent = "curl"; // this will tell the server to return the information as if the request was made by the linux "curl" command
+
+            string publicIPAddress;
+
+            request.Method = "GET";
+            using (WebResponse response = request.GetResponse())
+            {
+                using (var reader = new StreamReader(response.GetResponseStream()))
+                {
+                    publicIPAddress = reader.ReadToEnd();
+                }
+            }
+
+            return publicIPAddress.Replace("\n", "");
+        }
+        private async System.Threading.Tasks.Task<string> GetLocation(string ipAddress)
+        {
+            string url = $"http://ip-api.com/json/{ipAddress}";
+            using (WebClient client = new WebClient())
+            {
+                string json = await client.DownloadStringTaskAsync(url);
+                dynamic locationData = JsonConvert.DeserializeObject(json);
+                string location = locationData.city + ", " + locationData.regionName + ", " + locationData.country;
+                return location;
+            }
+        }
+
+        //local ip functions
+        private async void localip()
+        {
+            labelIPAddress.Text = GetPublicIpAddress();
+            string ipAddress = labelIPAddress.Text;
+            string location = await GetLocation(ipAddress);
+            labelLocation.Text = location;
+            lblip = labelIPAddress.Text;
+            lblloc = labelLocation.Text;
+        }
+
+        //vpn ip functions
         private async void ExternalIPlocation()
         {
             // Get the external IP address from ip-api.com
@@ -410,7 +486,33 @@ namespace VPN
             }
             labelLocation.Text = location;
         }
-    }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            if (isActive)
+            {
+                timeCs++;
+                if (timeCs >= 100)
+                {
+                    timeSec++;
+                    timeCs = 0;
+                    if (timeSec >= 60)
+                    {
+                        timeMin++;
+                        timeSec = 0;
+                    }
+                }
+            }
+            DrawTime();
+        }
+
+        private void DrawTime()
+        {
+            lblmin.Text = String.Format("{0,00}", timeMin);
+            lblsec.Text = String.Format("{0,00}", timeSec);
+        }
+    }    
+             
 }
 
 public class Location

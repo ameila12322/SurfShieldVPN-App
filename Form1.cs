@@ -18,6 +18,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.IO;
 using System.Timers;
+using System.Net.NetworkInformation;
 
 namespace VPN
 {
@@ -25,6 +26,8 @@ namespace VPN
     {
         private string lblloc;
         private string lblip;
+        private long initialDataSent;
+        private long initialDataReceived;
         private bool buttonClicked = false;
         int timeSec, timeMin, timeCs;
         bool isActive;
@@ -88,6 +91,7 @@ namespace VPN
             if (!buttonClicked)
             {
                 isActive = true;
+                starttrackdata();
 
                 if (servername.Text == "Netherlands")
                 {
@@ -102,13 +106,17 @@ namespace VPN
                         startInfo.Verb = "runas";
                         process.StartInfo = startInfo;
                         process.Start();
-                        await Task.Delay(9000);
+                        await Task.Delay(12000);
                         ExternalIPlocation();
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
                         MessageBox.Show("You've connected to server with udp");
-
                         Connectbtn.Enabled = true;
+                        await Task.Delay(5000);
+                        if(labelLocation.Text == "Bangalore,India")
+                        {
+                            ExternalIPlocation();
+                        }
 
                     }
                     else if (servername.Text == "Netherlands")
@@ -122,12 +130,17 @@ namespace VPN
                         startInfo.Verb = "runas";
                         process.StartInfo = startInfo;
                         process.Start();
-                        await Task.Delay(9000);
+                        await Task.Delay(12000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
                         MessageBox.Show("You've connected to server with tcp");
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
+                        await Task.Delay(5000);
+                        if (labelLocation.Text == "Bangalore,India")
+                        {
+                            ExternalIPlocation();
+                        }
                     }
                 }
                 if (servername.Text == "USA")
@@ -149,7 +162,11 @@ namespace VPN
                         MessageBox.Show("You've connected to server with udp");
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
-
+                        await Task.Delay(5000);
+                        if (labelLocation.Text == "Bangalore,India")
+                        {
+                            ExternalIPlocation();
+                        }
 
                     }
                     else if (servername.Text == "USA")
@@ -169,7 +186,11 @@ namespace VPN
                         MessageBox.Show("You've connected to server with tcp");
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
-
+                        await Task.Delay(5000);
+                        if (labelLocation.Text == "Bangalore,India")
+                        {
+                            ExternalIPlocation();
+                        }
                     }
                 }
 
@@ -192,7 +213,11 @@ namespace VPN
                         MessageBox.Show("You've connected to server with udp");
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
-
+                        await Task.Delay(5000);
+                        if (labelLocation.Text == "Bangalore,India")
+                        {
+                            ExternalIPlocation();
+                        }
 
                     }
                     else if (servername.Text == "Singapore")
@@ -212,7 +237,11 @@ namespace VPN
                         MessageBox.Show("You've connected to server with tcp");
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
-
+                        await Task.Delay(5000);
+                        if (labelLocation.Text == "Bangalore,India")
+                        {
+                            ExternalIPlocation();
+                        }
                     }
                 }
 
@@ -235,7 +264,11 @@ namespace VPN
                         MessageBox.Show("You've connected to server with udp");
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
-
+                        await Task.Delay(5000);
+                        if (labelLocation.Text == "Bangalore,India")
+                        {
+                            ExternalIPlocation();
+                        }
 
                     }
                     else if (servername.Text == "UK")
@@ -255,7 +288,11 @@ namespace VPN
                         MessageBox.Show("You've connected to server with tcp");
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
-
+                        await Task.Delay(5000);
+                        if (labelLocation.Text == "Bangalore,India")
+                        {
+                            ExternalIPlocation();
+                        }
                     }
                 }
 
@@ -278,7 +315,11 @@ namespace VPN
                         MessageBox.Show("You've connected to server with udp");
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
-
+                        await Task.Delay(5000);
+                        if (labelLocation.Text == "Bangalore,India")
+                        {
+                            ExternalIPlocation();
+                        }
 
                     }
                     else if (servername.Text == "Japan")
@@ -298,7 +339,11 @@ namespace VPN
                         MessageBox.Show("You've connected to server with tcp");
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
-
+                        await Task.Delay(5000);
+                        if (labelLocation.Text == "Bangalore,India")
+                        {
+                            ExternalIPlocation();
+                        }
                     }
                 }
 
@@ -321,7 +366,11 @@ namespace VPN
                         MessageBox.Show("You've connected to server with udp");
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
-
+                        await Task.Delay(5000);
+                        if (labelLocation.Text == "Bangalore,India")
+                        {
+                            ExternalIPlocation();
+                        }
 
                     }
                     else if (servername.Text == "Australia")
@@ -341,7 +390,11 @@ namespace VPN
                         MessageBox.Show("You've connected to server with tcp");
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
-
+                        await Task.Delay(5000);
+                        if (labelLocation.Text == "Bangalore,India")
+                        {
+                            ExternalIPlocation();
+                        }
                     }
                 }
 
@@ -382,6 +435,9 @@ namespace VPN
             timeMin = 0;
             timeCs = 0;
             timeSec = 0;
+            DU.Text = "";
+            DS.Text = "";
+            DR.Text = "";
         }
 
         private void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)
@@ -403,7 +459,7 @@ namespace VPN
             timeCs = 0;
             timeMin = 0;
             isActive = false;
-            ResetTime();
+            
         }
 
         private string GetPublicIpAddress()
@@ -448,6 +504,58 @@ namespace VPN
             lblloc = labelLocation.Text;
         }
 
+        private void starttrackdata()
+        {
+            NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
+            initialDataSent = 0;
+            initialDataReceived = 0;
+
+            foreach (NetworkInterface nic in nics)
+            {
+                IPv4InterfaceStatistics interfaceStats = nic.GetIPv4Statistics();
+                initialDataSent += interfaceStats.BytesSent;
+                initialDataReceived += interfaceStats.BytesReceived;
+            }
+        }
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            if (isActive)
+            {
+                NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
+                long dataSent = 0;
+                long dataReceived = 0;
+
+                foreach (NetworkInterface nic in nics)
+                {
+                    IPv4InterfaceStatistics interfaceStats = nic.GetIPv4Statistics();
+                    dataSent += interfaceStats.BytesSent;
+                    dataReceived += interfaceStats.BytesReceived;
+                }
+
+                dataSent -= initialDataSent;
+                dataReceived -= initialDataReceived;
+
+                double dataSentMB = dataSent / 1048576.0;
+                double dataReceivedMB = dataReceived / 1048576.0;
+                double totalDataMB = dataReceivedMB + dataSentMB;   
+                DS.Text = dataSentMB.ToString("0.0" + "MB");
+                DR.Text = dataReceivedMB.ToString("0.0" + "MB");
+                DU.Text = totalDataMB.ToString("0.0" + "MB");
+                timeCs++;
+                if (timeCs >= 100)
+                {
+                    timeSec++;
+                    timeCs = 0;
+                    if (timeSec >= 60)
+                    {
+                        timeMin++;
+                        timeSec = 0;
+                    }
+                }
+            }
+            DrawTime();
+        }
+
         //vpn ip functions
         private async void ExternalIPlocation()
         {
@@ -487,24 +595,7 @@ namespace VPN
             labelLocation.Text = location;
         }
 
-        private void timer_Tick(object sender, EventArgs e)
-        {
-            if (isActive)
-            {
-                timeCs++;
-                if (timeCs >= 100)
-                {
-                    timeSec++;
-                    timeCs = 0;
-                    if (timeSec >= 60)
-                    {
-                        timeMin++;
-                        timeSec = 0;
-                    }
-                }
-            }
-            DrawTime();
-        }
+        
 
         private void DrawTime()
         {

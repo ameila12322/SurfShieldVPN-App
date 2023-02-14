@@ -233,6 +233,16 @@ namespace VPN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_time_40 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-time-40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_upload_to_cloud_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-upload-to-cloud-50", resourceCulture);

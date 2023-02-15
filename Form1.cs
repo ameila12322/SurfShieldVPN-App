@@ -625,7 +625,11 @@ namespace VPN
             };
         }
 
-
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            //toggle the visibility of the button
+            guna2ImageButton2.Visible = !guna2ImageButton2.Visible;
+        }
     }
 
 

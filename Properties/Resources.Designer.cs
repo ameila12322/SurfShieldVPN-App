@@ -213,6 +213,36 @@ namespace VPN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_lock_96 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-lock-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_log_out_64__1___1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-log-out-64 (1) (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_log_out_64__2_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-log-out-64 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_plus_shield_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-plus-shield-64", resourceCulture);
@@ -286,6 +316,16 @@ namespace VPN.Properties {
         internal static System.Drawing.Bitmap Japan_Flag {
             get {
                 object obj = ResourceManager.GetObject("Japan_Flag", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo7 {
+            get {
+                object obj = ResourceManager.GetObject("logo7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

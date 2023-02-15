@@ -26,10 +26,11 @@ namespace VPN
     {
         private string lblloc;
         private string lblip;
+        private string status;
         private long initialDataSent;
         private long initialDataReceived;
         private bool buttonClicked = false;
-        int timeSec, timeMin, timeCs;
+        
         bool isActive;
         public Form1()
         {
@@ -37,6 +38,7 @@ namespace VPN
             Connectbtn.Text = "Connect";
             Connectbtn.Font = new Font("Segoe UI", 16, FontStyle.Bold);
             localip();
+            
 
 
 
@@ -46,6 +48,9 @@ namespace VPN
         {
             labelIPAddress.Text = lblip;
             labelLocation.Text = lblloc;
+            statuscon.Text = status;
+            statuscon.ForeColor = Color.Gray;
+            statuscon.Location = new Point(88, 117);
         }
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
@@ -92,6 +97,263 @@ namespace VPN
             {
                 isActive = true;
                 starttrackdata();
+                gaugesetting();
+
+                
+                if (servername.Text == "USA")
+                {
+                    if (!guna2ToggleSwitch1.Checked)
+                    {
+                        Connectbtn.Enabled = false;
+                        Process process = new Process();
+                        ProcessStartInfo startInfo = new ProcessStartInfo();
+                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
+                        startInfo.Arguments = "--config newyorkudp.ovpn";
+                        startInfo.Verb = "runas";
+                        process.StartInfo = startInfo;
+                        process.Start();
+                        await Task.Delay(8000);
+                        Connectbtn.Text = "Disconnect";
+                        buttonClicked = true;
+                        MessageBox.Show("You've connected to server with udp");
+                        ExternalIPlocation();
+                        Connectbtn.Enabled = true;
+                        await Task.Delay(10000);
+                        if (labelLocation.Text.ToString() == "Bengaluru,India")
+                        {
+                            ExternalIPlocation();
+                        }
+
+                    }
+                    else if (servername.Text == "USA")
+                    {
+                        Connectbtn.Enabled = false;
+                        Process process = new Process();
+                        ProcessStartInfo startInfo = new ProcessStartInfo();
+                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
+                        startInfo.Arguments = "--config newyorktcp.ovpn";
+                        startInfo.Verb = "runas";
+                        process.StartInfo = startInfo;
+                        process.Start();
+                        await Task.Delay(8000);
+                        Connectbtn.Text = "Disconnect";
+                        buttonClicked = true;
+                        MessageBox.Show("You've connected to server with tcp");
+                        ExternalIPlocation();
+                        Connectbtn.Enabled = true;
+                        await Task.Delay(10000);
+                        if (labelLocation.Text.ToString() == "Bengaluru,India")
+                        {
+                            ExternalIPlocation();
+                        }
+                    }
+                }
+
+                if (servername.Text == "Singapore")
+                {
+                    if (!guna2ToggleSwitch1.Checked)
+                    {
+                        Connectbtn.Enabled = false;
+                        Process process = new Process();
+                        ProcessStartInfo startInfo = new ProcessStartInfo();
+                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
+                        startInfo.Arguments = "--config singaporeudp.ovpn";
+                        startInfo.Verb = "runas";
+                        process.StartInfo = startInfo;
+                        process.Start();
+                        await Task.Delay(8000);
+                        Connectbtn.Text = "Disconnect";
+                        buttonClicked = true;
+                        MessageBox.Show("You've connected to server with udp");
+                        ExternalIPlocation();
+                        Connectbtn.Enabled = true;
+                        await Task.Delay(10000);
+                        if (labelLocation.Text.ToString() == "Bengaluru,India")
+                        {
+                            ExternalIPlocation();
+                        }
+
+                    }
+                    else if (servername.Text == "Singapore")
+                    {
+                        Connectbtn.Enabled = false;
+                        Process process = new Process();
+                        ProcessStartInfo startInfo = new ProcessStartInfo();
+                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
+                        startInfo.Arguments = "--config singaporetcp.ovpn";
+                        startInfo.Verb = "runas";
+                        process.StartInfo = startInfo;
+                        process.Start();
+                        await Task.Delay(8000);
+                        Connectbtn.Text = "Disconnect";
+                        buttonClicked = true;
+                        MessageBox.Show("You've connected to server with tcp");
+                        ExternalIPlocation();
+                        Connectbtn.Enabled = true;
+                        await Task.Delay(10000);
+                        if (labelLocation.Text.ToString() == "Bengaluru,India")
+                        {
+                            ExternalIPlocation();
+                        }
+                    }
+                }
+
+                if (servername.Text == "UK")
+                {
+                    if (!guna2ToggleSwitch1.Checked)
+                    {
+                        Connectbtn.Enabled = false;
+                        Process process = new Process();
+                        ProcessStartInfo startInfo = new ProcessStartInfo();
+                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
+                        startInfo.Arguments = "--config unitedkingdomudp.ovpn";
+                        startInfo.Verb = "runas";
+                        process.StartInfo = startInfo;
+                        process.Start();
+                        await Task.Delay(8000);
+                        Connectbtn.Text = "Disconnect";
+                        buttonClicked = true;
+                        MessageBox.Show("You've connected to server with udp");
+                        ExternalIPlocation();
+                        Connectbtn.Enabled = true;
+                        await Task.Delay(10000);
+                        if (labelLocation.Text.ToString() == "Bengaluru,India")
+                        {
+                            ExternalIPlocation();
+                        }
+
+                    }
+                    else if (servername.Text == "UK")
+                    {
+                        Connectbtn.Enabled = false;
+                        Process process = new Process();
+                        ProcessStartInfo startInfo = new ProcessStartInfo();
+                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
+                        startInfo.Arguments = "--config unitedkingdomtcp.ovpn";
+                        startInfo.Verb = "runas";
+                        process.StartInfo = startInfo;
+                        process.Start();
+                        await Task.Delay(8000);
+                        Connectbtn.Text = "Disconnect";
+                        buttonClicked = true;
+                        MessageBox.Show("You've connected to server with tcp");
+                        ExternalIPlocation();
+                        Connectbtn.Enabled = true;
+                        await Task.Delay(10000);
+                        if (labelLocation.Text.ToString() == "Bengaluru,India")
+                        {
+                            ExternalIPlocation();
+                        }
+                    }
+                }
+
+                if (servername.Text == "Japan")
+                {
+                    if (!guna2ToggleSwitch1.Checked)
+                    {
+                        Connectbtn.Enabled = false;
+                        Process process = new Process();
+                        ProcessStartInfo startInfo = new ProcessStartInfo();
+                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
+                        startInfo.Arguments = "--config Japanudp.ovpn";
+                        startInfo.Verb = "runas";
+                        process.StartInfo = startInfo;
+                        process.Start();
+                        await Task.Delay(8000);
+                        Connectbtn.Text = "Disconnect";
+                        buttonClicked = true;
+                        MessageBox.Show("You've connected to server with udp");
+                        ExternalIPlocation();
+                        Connectbtn.Enabled = true;
+                        await Task.Delay(10000);
+                        if (labelLocation.Text.ToString() == "Bengaluru,India")
+                        {
+                            ExternalIPlocation();
+                        }
+
+                    }
+                    else if (servername.Text == "Japan")
+                    {
+                        Connectbtn.Enabled = false;
+                        Process process = new Process();
+                        ProcessStartInfo startInfo = new ProcessStartInfo();
+                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
+                        startInfo.Arguments = "--config Japantcp.ovpn";
+                        startInfo.Verb = "runas";
+                        process.StartInfo = startInfo;
+                        process.Start();
+                        await Task.Delay(8000);
+                        Connectbtn.Text = "Disconnect";
+                        buttonClicked = true;
+                        MessageBox.Show("You've connected to server with tcp");
+                        ExternalIPlocation();
+                        Connectbtn.Enabled = true;
+                        await Task.Delay(10000);
+                        if (labelLocation.Text.ToString() == "Bengaluru,India")
+                        {
+                            ExternalIPlocation();
+                        }
+                    }
+                }
+
+                if (servername.Text == "Australia")
+                {
+                    if (!guna2ToggleSwitch1.Checked)
+                    {
+                        Connectbtn.Enabled = false;
+                        Process process = new Process();
+                        ProcessStartInfo startInfo = new ProcessStartInfo();
+                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
+                        startInfo.Arguments = "--config Australiaudp.ovpn";
+                        startInfo.Verb = "runas";
+                        process.StartInfo = startInfo;
+                        process.Start();
+                        await Task.Delay(8000);
+                        Connectbtn.Text = "Disconnect";
+                        buttonClicked = true;
+                        MessageBox.Show("You've connected to server with udp");
+                        ExternalIPlocation();
+                        Connectbtn.Enabled = true;
+                        await Task.Delay(10000);
+                        if (labelLocation.Text.ToString() == "Bengaluru,India")
+                        {
+                            ExternalIPlocation();
+                        }
+
+                    }
+                    else if (servername.Text == "Australia")
+                    {
+                        Connectbtn.Enabled = false;
+                        Process process = new Process();
+                        ProcessStartInfo startInfo = new ProcessStartInfo();
+                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
+                        startInfo.Arguments = "--config Australiatcp.ovpn";
+                        startInfo.Verb = "runas";
+                        process.StartInfo = startInfo;
+                        process.Start();
+                        await Task.Delay(8000);
+                        Connectbtn.Text = "Disconnect";
+                        buttonClicked = true;
+                        MessageBox.Show("You've connected to server with tcp");
+                        ExternalIPlocation();
+                        Connectbtn.Enabled = true;
+                        await Task.Delay(10000);
+                        if (labelLocation.Text.ToString() == "Bengaluru,India")
+                        {
+                            ExternalIPlocation();
+                        }
+                    }
+                }
 
                 if (servername.Text == "Netherlands")
                 {
@@ -112,8 +374,9 @@ namespace VPN
                         buttonClicked = true;
                         MessageBox.Show("You've connected to server with udp");
                         Connectbtn.Enabled = true;
-                        await Task.Delay(5000);
-                        if(labelLocation.Text == "Bangalore,India")
+
+                        await Task.Delay(20000);
+                        if (labelLocation.Text.ToString() == "Bengaluru,India")
                         {
                             ExternalIPlocation();
                         }
@@ -136,268 +399,13 @@ namespace VPN
                         MessageBox.Show("You've connected to server with tcp");
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
-                        await Task.Delay(5000);
-                        if (labelLocation.Text == "Bangalore,India")
+                        await Task.Delay(20000);
+                        if (labelLocation.Text.ToString() == "Bengaluru,India")
                         {
                             ExternalIPlocation();
                         }
                     }
                 }
-                if (servername.Text == "USA")
-                {
-                    if (!guna2ToggleSwitch1.Checked)
-                    {
-                        Connectbtn.Enabled = false;
-                        Process process = new Process();
-                        ProcessStartInfo startInfo = new ProcessStartInfo();
-                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
-                        startInfo.Arguments = "--config newyorkudp.ovpn";
-                        startInfo.Verb = "runas";
-                        process.StartInfo = startInfo;
-                        process.Start();
-                        await Task.Delay(6000);
-                        Connectbtn.Text = "Disconnect";
-                        buttonClicked = true;
-                        MessageBox.Show("You've connected to server with udp");
-                        ExternalIPlocation();
-                        Connectbtn.Enabled = true;
-                        await Task.Delay(5000);
-                        if (labelLocation.Text == "Bangalore,India")
-                        {
-                            ExternalIPlocation();
-                        }
-
-                    }
-                    else if (servername.Text == "USA")
-                    {
-                        Connectbtn.Enabled = false;
-                        Process process = new Process();
-                        ProcessStartInfo startInfo = new ProcessStartInfo();
-                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
-                        startInfo.Arguments = "--config newyorktcp.ovpn";
-                        startInfo.Verb = "runas";
-                        process.StartInfo = startInfo;
-                        process.Start();
-                        await Task.Delay(6000);
-                        Connectbtn.Text = "Disconnect";
-                        buttonClicked = true;
-                        MessageBox.Show("You've connected to server with tcp");
-                        ExternalIPlocation();
-                        Connectbtn.Enabled = true;
-                        await Task.Delay(5000);
-                        if (labelLocation.Text == "Bangalore,India")
-                        {
-                            ExternalIPlocation();
-                        }
-                    }
-                }
-
-                if (servername.Text == "Singapore")
-                {
-                    if (!guna2ToggleSwitch1.Checked)
-                    {
-                        Connectbtn.Enabled = false;
-                        Process process = new Process();
-                        ProcessStartInfo startInfo = new ProcessStartInfo();
-                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
-                        startInfo.Arguments = "--config singaporeudp.ovpn";
-                        startInfo.Verb = "runas";
-                        process.StartInfo = startInfo;
-                        process.Start();
-                        await Task.Delay(6000);
-                        Connectbtn.Text = "Disconnect";
-                        buttonClicked = true;
-                        MessageBox.Show("You've connected to server with udp");
-                        ExternalIPlocation();
-                        Connectbtn.Enabled = true;
-                        await Task.Delay(5000);
-                        if (labelLocation.Text == "Bangalore,India")
-                        {
-                            ExternalIPlocation();
-                        }
-
-                    }
-                    else if (servername.Text == "Singapore")
-                    {
-                        Connectbtn.Enabled = false;
-                        Process process = new Process();
-                        ProcessStartInfo startInfo = new ProcessStartInfo();
-                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
-                        startInfo.Arguments = "--config singaporetcp.ovpn";
-                        startInfo.Verb = "runas";
-                        process.StartInfo = startInfo;
-                        process.Start();
-                        await Task.Delay(6000);
-                        Connectbtn.Text = "Disconnect";
-                        buttonClicked = true;
-                        MessageBox.Show("You've connected to server with tcp");
-                        ExternalIPlocation();
-                        Connectbtn.Enabled = true;
-                        await Task.Delay(5000);
-                        if (labelLocation.Text == "Bangalore,India")
-                        {
-                            ExternalIPlocation();
-                        }
-                    }
-                }
-
-                if (servername.Text == "UK")
-                {
-                    if (!guna2ToggleSwitch1.Checked)
-                    {
-                        Connectbtn.Enabled = false;
-                        Process process = new Process();
-                        ProcessStartInfo startInfo = new ProcessStartInfo();
-                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
-                        startInfo.Arguments = "--config unitedkingdomudp.ovpn";
-                        startInfo.Verb = "runas";
-                        process.StartInfo = startInfo;
-                        process.Start();
-                        await Task.Delay(6000);
-                        Connectbtn.Text = "Disconnect";
-                        buttonClicked = true;
-                        MessageBox.Show("You've connected to server with udp");
-                        ExternalIPlocation();
-                        Connectbtn.Enabled = true;
-                        await Task.Delay(5000);
-                        if (labelLocation.Text == "Bangalore,India")
-                        {
-                            ExternalIPlocation();
-                        }
-
-                    }
-                    else if (servername.Text == "UK")
-                    {
-                        Connectbtn.Enabled = false;
-                        Process process = new Process();
-                        ProcessStartInfo startInfo = new ProcessStartInfo();
-                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
-                        startInfo.Arguments = "--config unitedkingdomtcp.ovpn";
-                        startInfo.Verb = "runas";
-                        process.StartInfo = startInfo;
-                        process.Start();
-                        await Task.Delay(6000);
-                        Connectbtn.Text = "Disconnect";
-                        buttonClicked = true;
-                        MessageBox.Show("You've connected to server with tcp");
-                        ExternalIPlocation();
-                        Connectbtn.Enabled = true;
-                        await Task.Delay(5000);
-                        if (labelLocation.Text == "Bangalore,India")
-                        {
-                            ExternalIPlocation();
-                        }
-                    }
-                }
-
-                if (servername.Text == "Japan")
-                {
-                    if (!guna2ToggleSwitch1.Checked)
-                    {
-                        Connectbtn.Enabled = false;
-                        Process process = new Process();
-                        ProcessStartInfo startInfo = new ProcessStartInfo();
-                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
-                        startInfo.Arguments = "--config Japanudp.ovpn";
-                        startInfo.Verb = "runas";
-                        process.StartInfo = startInfo;
-                        process.Start();
-                        await Task.Delay(6000);
-                        Connectbtn.Text = "Disconnect";
-                        buttonClicked = true;
-                        MessageBox.Show("You've connected to server with udp");
-                        ExternalIPlocation();
-                        Connectbtn.Enabled = true;
-                        await Task.Delay(5000);
-                        if (labelLocation.Text == "Bangalore,India")
-                        {
-                            ExternalIPlocation();
-                        }
-
-                    }
-                    else if (servername.Text == "Japan")
-                    {
-                        Connectbtn.Enabled = false;
-                        Process process = new Process();
-                        ProcessStartInfo startInfo = new ProcessStartInfo();
-                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
-                        startInfo.Arguments = "--config Japantcp.ovpn";
-                        startInfo.Verb = "runas";
-                        process.StartInfo = startInfo;
-                        process.Start();
-                        await Task.Delay(6000);
-                        Connectbtn.Text = "Disconnect";
-                        buttonClicked = true;
-                        MessageBox.Show("You've connected to server with tcp");
-                        ExternalIPlocation();
-                        Connectbtn.Enabled = true;
-                        await Task.Delay(5000);
-                        if (labelLocation.Text == "Bangalore,India")
-                        {
-                            ExternalIPlocation();
-                        }
-                    }
-                }
-
-                if (servername.Text == "Australia")
-                {
-                    if (!guna2ToggleSwitch1.Checked)
-                    {
-                        Connectbtn.Enabled = false;
-                        Process process = new Process();
-                        ProcessStartInfo startInfo = new ProcessStartInfo();
-                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
-                        startInfo.Arguments = "--config Australiaudp.ovpn";
-                        startInfo.Verb = "runas";
-                        process.StartInfo = startInfo;
-                        process.Start();
-                        await Task.Delay(6000);
-                        Connectbtn.Text = "Disconnect";
-                        buttonClicked = true;
-                        MessageBox.Show("You've connected to server with udp");
-                        ExternalIPlocation();
-                        Connectbtn.Enabled = true;
-                        await Task.Delay(5000);
-                        if (labelLocation.Text == "Bangalore,India")
-                        {
-                            ExternalIPlocation();
-                        }
-
-                    }
-                    else if (servername.Text == "Australia")
-                    {
-                        Connectbtn.Enabled = false;
-                        Process process = new Process();
-                        ProcessStartInfo startInfo = new ProcessStartInfo();
-                        startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                        startInfo.FileName = @"C:\Program Files\OpenVPN\bin\openvpn.exe";
-                        startInfo.Arguments = "--config Australiatcp.ovpn";
-                        startInfo.Verb = "runas";
-                        process.StartInfo = startInfo;
-                        process.Start();
-                        await Task.Delay(6000);
-                        Connectbtn.Text = "Disconnect";
-                        buttonClicked = true;
-                        MessageBox.Show("You've connected to server with tcp");
-                        ExternalIPlocation();
-                        Connectbtn.Enabled = true;
-                        await Task.Delay(5000);
-                        if (labelLocation.Text == "Bangalore,India")
-                        {
-                            ExternalIPlocation();
-                        }
-                    }
-                }
-
             }
 
 
@@ -413,14 +421,14 @@ namespace VPN
                     UseShellExecute = false
                 }).WaitForExit();
 
-                await Task.Delay(2000);
+                await Task.Delay(6000);
                 Connectbtn.Text = "Connect";
                 buttonClicked = false;
                 Connectbtn.Enabled = true;
                 setlocalipdetails();
                 isActive = false;
                 ResetTime();
-
+                guna2RadialGauge1.Value = 0;
 
 
             }
@@ -432,12 +440,10 @@ namespace VPN
 
         private void ResetTime()
         {
-            timeMin = 0;
-            timeCs = 0;
-            timeSec = 0;
-            DU.Text = "";
-            DS.Text = "";
-            DR.Text = "";
+            
+            DU.Text = "00" + "MB";
+            DS.Text = "00" + "MB";
+            DR.Text = "00" + "MB";
         }
 
         private void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)
@@ -455,11 +461,10 @@ namespace VPN
         private void Form1_Load(object sender, EventArgs e)
         {
             
-            timeSec = 0;
-            timeCs = 0;
-            timeMin = 0;
+         
             isActive = false;
             
+
         }
 
         private string GetPublicIpAddress()
@@ -502,6 +507,8 @@ namespace VPN
             labelLocation.Text = location;
             lblip = labelIPAddress.Text;
             lblloc = labelLocation.Text;
+            status = statuscon.Text;
+            
         }
 
         private void starttrackdata()
@@ -541,25 +548,20 @@ namespace VPN
                 DS.Text = dataSentMB.ToString("0.0" + "MB");
                 DR.Text = dataReceivedMB.ToString("0.0" + "MB");
                 DU.Text = totalDataMB.ToString("0.0" + "MB");
-                timeCs++;
-                if (timeCs >= 100)
-                {
-                    timeSec++;
-                    timeCs = 0;
-                    if (timeSec >= 60)
-                    {
-                        timeMin++;
-                        timeSec = 0;
-                    }
-                }
+                
             }
-            DrawTime();
+            
         }
 
+     
+
         //vpn ip functions
-        private async void ExternalIPlocation()
+        private void ExternalIPlocation()
         {
             // Get the external IP address from ip-api.com
+            statuscon.ForeColor= Color.SkyBlue;
+            statuscon.Location= new Point(98,117);
+            statuscon.Text = "CONNECTED";
             string externalIP = "";
             try
             {
@@ -597,13 +599,36 @@ namespace VPN
 
         
 
-        private void DrawTime()
+
+        private void gaugesetting()
         {
-            lblmin.Text = String.Format("{0,00}", timeMin);
-            lblsec.Text = String.Format("{0,00}", timeSec);
+            System.Windows.Forms.Timer timer2 = new System.Windows.Forms.Timer();
+
+            // Setting the interval for the timer
+            timer2.Interval= 12;
+
+            // Enabling the timer
+            timer2.Enabled = true;
+            
+            // Adding a tick event for the timer
+            timer2.Tick += (s, eventArgs) =>
+            {
+                // Incrementing the value of the gauge
+                guna2RadialGauge1.Value += 1;
+
+                // Checking if the gauge has reached 100
+                if (guna2RadialGauge1.Value >= 100)
+                {
+                    // Disabling the timer if the gauge reaches 100
+                    timer2.Enabled = false;
+                }
+            };
         }
-    }    
-             
+
+
+    }
+
+
 }
 
 public class Location

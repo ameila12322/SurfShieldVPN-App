@@ -37,11 +37,10 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.statuscon = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.DU = new System.Windows.Forms.Label();
             this.protocol = new System.Windows.Forms.Label();
             this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.label13 = new System.Windows.Forms.Label();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.Connectbtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
@@ -56,9 +55,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2RadialGauge1 = new Guna.UI2.WinForms.Guna2RadialGauge();
-            this.lblsec = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblmin = new System.Windows.Forms.Label();
+            this.DU = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.pn_menu = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
@@ -79,7 +77,6 @@
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label5 = new System.Windows.Forms.Label();
             this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
@@ -92,6 +89,8 @@
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -159,11 +158,11 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(31)))));
+            this.guna2Panel2.Controls.Add(this.label1);
+            this.guna2Panel2.Controls.Add(this.statuscon);
             this.guna2Panel2.Controls.Add(this.label9);
-            this.guna2Panel2.Controls.Add(this.DU);
             this.guna2Panel2.Controls.Add(this.protocol);
             this.guna2Panel2.Controls.Add(this.guna2ToggleSwitch1);
-            this.guna2Panel2.Controls.Add(this.label13);
             this.guna2Panel2.Controls.Add(this.guna2CircleButton1);
             this.guna2Panel2.Controls.Add(this.Connectbtn);
             this.guna2Panel2.Controls.Add(this.guna2VSeparator1);
@@ -187,6 +186,19 @@
             this.guna2Panel2.Size = new System.Drawing.Size(281, 708);
             this.guna2Panel2.TabIndex = 1;
             // 
+            // statuscon
+            // 
+            this.statuscon.AutoSize = true;
+            this.statuscon.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.statuscon, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.statuscon.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statuscon.ForeColor = System.Drawing.Color.Gray;
+            this.statuscon.Location = new System.Drawing.Point(88, 117);
+            this.statuscon.Name = "statuscon";
+            this.statuscon.Size = new System.Drawing.Size(107, 17);
+            this.statuscon.TabIndex = 28;
+            this.statuscon.Text = "DISCONNECTED";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -200,18 +212,6 @@
             this.label9.Size = new System.Drawing.Size(69, 15);
             this.label9.TabIndex = 27;
             this.label9.Text = "PROTOCOL";
-            // 
-            // DU
-            // 
-            this.DU.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.DU, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.DU.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(251)))));
-            this.DU.Location = new System.Drawing.Point(101, 91);
-            this.DU.Name = "DU";
-            this.DU.Size = new System.Drawing.Size(72, 29);
-            this.DU.TabIndex = 10;
-            this.DU.Text = "0 MB";
             // 
             // protocol
             // 
@@ -250,18 +250,6 @@
             this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2ToggleSwitch1.UseTransparentBackground = true;
             this.guna2ToggleSwitch1.CheckedChanged += new System.EventHandler(this.guna2ToggleSwitch1_CheckedChanged);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.label13, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label13.Location = new System.Drawing.Point(98, 120);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(78, 13);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "DATA USED";
             // 
             // guna2CircleButton1
             // 
@@ -438,7 +426,7 @@
             this.guna2Transition1.SetDecoration(this.label3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(59, 239);
+            this.label3.Location = new System.Drawing.Point(51, 239);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(175, 20);
@@ -452,7 +440,7 @@
             this.guna2Transition1.SetDecoration(this.label2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label2.Font = new System.Drawing.Font("Segoe UI", 19.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(87, 202);
+            this.label2.Location = new System.Drawing.Point(84, 202);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 36);
@@ -467,7 +455,7 @@
             this.guna2RadialGauge1.FillColor = System.Drawing.Color.DimGray;
             this.guna2RadialGauge1.Font = new System.Drawing.Font("Verdana", 8.2F);
             this.guna2RadialGauge1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
-            this.guna2RadialGauge1.Location = new System.Drawing.Point(50, 27);
+            this.guna2RadialGauge1.Location = new System.Drawing.Point(38, 11);
             this.guna2RadialGauge1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2RadialGauge1.MinimumSize = new System.Drawing.Size(22, 24);
             this.guna2RadialGauge1.Name = "guna2RadialGauge1";
@@ -477,49 +465,32 @@
             this.guna2RadialGauge1.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
             this.guna2RadialGauge1.ProgressThickness = 15;
             this.guna2RadialGauge1.ShowPercentage = false;
-            this.guna2RadialGauge1.Size = new System.Drawing.Size(175, 175);
+            this.guna2RadialGauge1.Size = new System.Drawing.Size(201, 201);
             this.guna2RadialGauge1.TabIndex = 2;
-            this.guna2RadialGauge1.Value = 55;
             // 
-            // lblsec
+            // DU
             // 
-            this.lblsec.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.lblsec, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblsec.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblsec.ForeColor = System.Drawing.Color.Silver;
-            this.lblsec.Location = new System.Drawing.Point(149, 65);
-            this.lblsec.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblsec.Name = "lblsec";
-            this.lblsec.Size = new System.Drawing.Size(39, 30);
-            this.lblsec.TabIndex = 28;
-            this.lblsec.Text = "00";
+            this.DU.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.DU, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.DU.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(251)))));
+            this.DU.Location = new System.Drawing.Point(111, 36);
+            this.DU.Name = "DU";
+            this.DU.Size = new System.Drawing.Size(72, 29);
+            this.DU.TabIndex = 10;
+            this.DU.Text = "0 MB";
             // 
-            // label1
+            // label13
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Transition1.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.Location = new System.Drawing.Point(89, 35);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "TIME ELAPSED";
-            // 
-            // lblmin
-            // 
-            this.lblmin.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.lblmin, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblmin.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmin.ForeColor = System.Drawing.Color.Silver;
-            this.lblmin.Location = new System.Drawing.Point(90, 65);
-            this.lblmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblmin.Name = "lblmin";
-            this.lblmin.Size = new System.Drawing.Size(39, 30);
-            this.lblmin.TabIndex = 2;
-            this.lblmin.Text = "00";
+            this.label13.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.label13, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label13.Location = new System.Drawing.Point(98, 74);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(111, 20);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "DATA USED";
             // 
             // guna2BorderlessForm1
             // 
@@ -548,7 +519,7 @@
             this.pn_menu.Location = new System.Drawing.Point(281, 27);
             this.pn_menu.Margin = new System.Windows.Forms.Padding(2);
             this.pn_menu.Name = "pn_menu";
-            this.pn_menu.Size = new System.Drawing.Size(220, 681);
+            this.pn_menu.Size = new System.Drawing.Size(219, 681);
             this.pn_menu.TabIndex = 3;
             this.pn_menu.Visible = false;
             // 
@@ -724,7 +695,7 @@
             this.Australia.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
             this.Australia.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Australia.ForeColor = System.Drawing.Color.Gray;
-            this.Australia.Location = new System.Drawing.Point(16, 299);
+            this.Australia.Location = new System.Drawing.Point(16, 254);
             this.Australia.Name = "Australia";
             this.Australia.Size = new System.Drawing.Size(181, 41);
             this.Australia.TabIndex = 5;
@@ -752,7 +723,7 @@
             this.Japan.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Japan.ForeColor = System.Drawing.Color.Gray;
             this.Japan.ImageOffset = new System.Drawing.Point(8, 0);
-            this.Japan.Location = new System.Drawing.Point(16, 252);
+            this.Japan.Location = new System.Drawing.Point(16, 207);
             this.Japan.Name = "Japan";
             this.Japan.Size = new System.Drawing.Size(181, 41);
             this.Japan.TabIndex = 4;
@@ -779,7 +750,7 @@
             this.UK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
             this.UK.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UK.ForeColor = System.Drawing.Color.Gray;
-            this.UK.Location = new System.Drawing.Point(16, 205);
+            this.UK.Location = new System.Drawing.Point(16, 160);
             this.UK.Name = "UK";
             this.UK.Size = new System.Drawing.Size(181, 41);
             this.UK.TabIndex = 3;
@@ -806,7 +777,7 @@
             this.Singapore.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
             this.Singapore.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Singapore.ForeColor = System.Drawing.Color.Gray;
-            this.Singapore.Location = new System.Drawing.Point(16, 158);
+            this.Singapore.Location = new System.Drawing.Point(16, 113);
             this.Singapore.Name = "Singapore";
             this.Singapore.Size = new System.Drawing.Size(181, 41);
             this.Singapore.TabIndex = 2;
@@ -834,7 +805,7 @@
             this.USA.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
             this.USA.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.USA.ForeColor = System.Drawing.Color.Gray;
-            this.USA.Location = new System.Drawing.Point(16, 111);
+            this.USA.Location = new System.Drawing.Point(16, 66);
             this.USA.Name = "USA";
             this.USA.Size = new System.Drawing.Size(181, 41);
             this.USA.TabIndex = 1;
@@ -860,7 +831,7 @@
             this.Netherlands.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
             this.Netherlands.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Netherlands.ForeColor = System.Drawing.Color.Gray;
-            this.Netherlands.Location = new System.Drawing.Point(16, 64);
+            this.Netherlands.Location = new System.Drawing.Point(16, 301);
             this.Netherlands.Name = "Netherlands";
             this.Netherlands.Size = new System.Drawing.Size(181, 41);
             this.Netherlands.TabIndex = 0;
@@ -928,12 +899,10 @@
             this.guna2GradientPanel3.AutoRoundedCorners = true;
             this.guna2GradientPanel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel3.BorderRadius = 65;
-            this.guna2GradientPanel3.Controls.Add(this.label5);
             this.guna2GradientPanel3.Controls.Add(this.guna2PictureBox7);
-            this.guna2GradientPanel3.Controls.Add(this.lblsec);
-            this.guna2GradientPanel3.Controls.Add(this.label1);
+            this.guna2GradientPanel3.Controls.Add(this.DU);
             this.guna2GradientPanel3.Controls.Add(this.guna2PictureBox3);
-            this.guna2GradientPanel3.Controls.Add(this.lblmin);
+            this.guna2GradientPanel3.Controls.Add(this.label13);
             this.guna2Transition1.SetDecoration(this.guna2GradientPanel3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(31)))));
@@ -943,23 +912,10 @@
             this.guna2GradientPanel3.TabIndex = 6;
             this.guna2GradientPanel3.UseTransparentBackground = true;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.label5, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Silver;
-            this.label5.Location = new System.Drawing.Point(126, 65);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(19, 30);
-            this.label5.TabIndex = 29;
-            this.label5.Text = ":";
-            // 
             // guna2PictureBox7
             // 
             this.guna2Transition1.SetDecoration(this.guna2PictureBox7, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox7.Image = global::VPN.Properties.Resources.icons8_time_40;
+            this.guna2PictureBox7.Image = global::VPN.Properties.Resources.icons8_big_data_502;
             this.guna2PictureBox7.ImageRotate = 0F;
             this.guna2PictureBox7.Location = new System.Drawing.Point(33, 42);
             this.guna2PictureBox7.Name = "guna2PictureBox7";
@@ -1116,6 +1072,21 @@
             this.timer.Interval = 10;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(98, 92);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 25);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "STATUS";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1171,8 +1142,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblmin;
         private Guna.UI2.WinForms.Guna2RadialGauge guna2RadialGauge1;
         private System.Windows.Forms.Label servername;
         private System.Windows.Forms.Label label8;
@@ -1221,9 +1190,12 @@
         private System.Windows.Forms.Label username;
         private System.Windows.Forms.Label protocol;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lblsec;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Label statuscon;
+        private System.Windows.Forms.Label label1;
     }
 }
 

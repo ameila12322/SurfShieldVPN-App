@@ -19,6 +19,7 @@ using System.Threading;
 using System.IO;
 using System.Timers;
 using System.Net.NetworkInformation;
+using Npgsql;
 
 namespace VPN
 {
@@ -35,10 +36,13 @@ namespace VPN
         public Form1()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             Connectbtn.Text = "Connect";
             Connectbtn.Font = new Font("Segoe UI", 16, FontStyle.Bold);
             localip();
-            
+            Form2 Form2 = (Form2)Application.OpenForms["Form2"];
+            if(Form2 != null )
+            username.Text = Form2.GetText();
 
 
 
@@ -625,10 +629,17 @@ namespace VPN
             };
         }
 
-        private void guna2ImageButton1_Click(object sender, EventArgs e)
+
+        private void guna2ImageButton2_Click(object sender, EventArgs e)
         {
-            //toggle the visibility of the button
-            guna2ImageButton2.Visible = !guna2ImageButton2.Visible;
+            this.Close();
+            Form2 Form2 = new Form2();
+            Form2.Show();
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 

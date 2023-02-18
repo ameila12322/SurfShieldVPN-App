@@ -40,7 +40,7 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.Loginbtn = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.forgot = new System.Windows.Forms.Label();
             this.chkRememberMe = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -52,13 +52,13 @@
             this.Createbtn = new Guna.UI2.WinForms.Guna2Button();
             this.loginpg = new Guna.UI2.WinForms.Guna2Panel();
             this.createpg = new Guna.UI2.WinForms.Guna2Panel();
-            this.backbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.emailadd = new Guna.UI2.WinForms.Guna2TextBox();
-            this.newusername = new Guna.UI2.WinForms.Guna2TextBox();
-            this.verifypass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.newpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.createaccbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.backbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.newpassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.verifypass = new Guna.UI2.WinForms.Guna2TextBox();
+            this.newusername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.emailadd = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -88,6 +88,7 @@
             // 
             // guna2AnimateWindow1
             // 
+            this.guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND;
             this.guna2AnimateWindow1.TargetForm = this;
             // 
             // guna2DragControl1
@@ -153,19 +154,19 @@
             this.label3.TabIndex = 36;
             this.label3.Text = "Remember me";
             // 
-            // label4
+            // forgot
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Transition1.SetDecoration(this.label4, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label4.Location = new System.Drawing.Point(189, 275);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 19);
-            this.label4.TabIndex = 38;
-            this.label4.Text = "Forgot Password?";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.forgot.AutoSize = true;
+            this.forgot.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.forgot, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.forgot.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forgot.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.forgot.Location = new System.Drawing.Point(189, 275);
+            this.forgot.Name = "forgot";
+            this.forgot.Size = new System.Drawing.Size(142, 19);
+            this.forgot.TabIndex = 38;
+            this.forgot.Text = "Forgot Password?";
+            this.forgot.Click += new System.EventHandler(this.forgot_Click);
             // 
             // chkRememberMe
             // 
@@ -313,6 +314,7 @@
             this.Createbtn.AutoRoundedCorners = true;
             this.Createbtn.BackColor = System.Drawing.Color.Transparent;
             this.Createbtn.BorderRadius = 25;
+            this.Createbtn.CustomImages.Image = global::VPN.Properties.Resources.icons8_right_arrow_32;
             this.guna2Transition1.SetDecoration(this.Createbtn, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Createbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Createbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -341,10 +343,10 @@
             this.loginpg.Controls.Add(this.label3);
             this.loginpg.Controls.Add(this.guna2Separator2);
             this.loginpg.Controls.Add(this.txtPassword);
-            this.loginpg.Controls.Add(this.label4);
+            this.loginpg.Controls.Add(this.forgot);
             this.loginpg.Controls.Add(this.guna2Separator1);
             this.guna2Transition1.SetDecoration(this.loginpg, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.loginpg.Location = new System.Drawing.Point(394, 103);
+            this.loginpg.Location = new System.Drawing.Point(398, 103);
             this.loginpg.Name = "loginpg";
             this.loginpg.Size = new System.Drawing.Size(359, 560);
             this.loginpg.TabIndex = 45;
@@ -353,21 +355,44 @@
             // createpg
             // 
             this.createpg.AutoRoundedCorners = true;
-            this.createpg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(88)))), ((int)(((byte)(130)))));
-            this.createpg.BorderRadius = 170;
-            this.createpg.Controls.Add(this.backbtn);
-            this.createpg.Controls.Add(this.label6);
-            this.createpg.Controls.Add(this.emailadd);
-            this.createpg.Controls.Add(this.newusername);
-            this.createpg.Controls.Add(this.verifypass);
-            this.createpg.Controls.Add(this.newpassword);
+            this.createpg.BackColor = System.Drawing.Color.Transparent;
+            this.createpg.BorderRadius = 25;
             this.createpg.Controls.Add(this.createaccbtn);
+            this.createpg.Controls.Add(this.backbtn);
+            this.createpg.Controls.Add(this.newpassword);
+            this.createpg.Controls.Add(this.label6);
+            this.createpg.Controls.Add(this.verifypass);
+            this.createpg.Controls.Add(this.newusername);
+            this.createpg.Controls.Add(this.emailadd);
             this.guna2Transition1.SetDecoration(this.createpg, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.createpg.Location = new System.Drawing.Point(794, 133);
+            this.createpg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(88)))), ((int)(((byte)(130)))));
+            this.createpg.Location = new System.Drawing.Point(763, 103);
             this.createpg.Name = "createpg";
-            this.createpg.Size = new System.Drawing.Size(342, 515);
-            this.createpg.TabIndex = 46;
+            this.createpg.Size = new System.Drawing.Size(358, 560);
+            this.createpg.TabIndex = 48;
+            this.createpg.UseTransparentBackground = true;
             this.createpg.Visible = false;
+            // 
+            // createaccbtn
+            // 
+            this.createaccbtn.Animated = true;
+            this.createaccbtn.AutoRoundedCorners = true;
+            this.createaccbtn.BackColor = System.Drawing.Color.Transparent;
+            this.createaccbtn.BorderRadius = 25;
+            this.guna2Transition1.SetDecoration(this.createaccbtn, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.createaccbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.createaccbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.createaccbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.createaccbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.createaccbtn.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.createaccbtn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createaccbtn.ForeColor = System.Drawing.Color.DimGray;
+            this.createaccbtn.Location = new System.Drawing.Point(57, 402);
+            this.createaccbtn.Name = "createaccbtn";
+            this.createaccbtn.Size = new System.Drawing.Size(245, 53);
+            this.createaccbtn.TabIndex = 44;
+            this.createaccbtn.Text = "Create account";
+            this.createaccbtn.Click += new System.EventHandler(this.createaccbtn_Click);
             // 
             // backbtn
             // 
@@ -383,113 +408,12 @@
             this.backbtn.FillColor = System.Drawing.Color.Transparent;
             this.backbtn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backbtn.ForeColor = System.Drawing.Color.White;
-            this.backbtn.Location = new System.Drawing.Point(89, 467);
+            this.backbtn.Location = new System.Drawing.Point(105, 473);
             this.backbtn.Name = "backbtn";
             this.backbtn.Size = new System.Drawing.Size(164, 39);
             this.backbtn.TabIndex = 47;
             this.backbtn.Text = "Back";
             this.backbtn.Click += new System.EventHandler(this.backbtn_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Transition1.SetDecoration(this.label6, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(38, 18);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(248, 37);
-            this.label6.TabIndex = 41;
-            this.label6.Text = "Create account";
-            // 
-            // emailadd
-            // 
-            this.emailadd.Animated = true;
-            this.emailadd.BackColor = System.Drawing.Color.Transparent;
-            this.emailadd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.emailadd.BorderRadius = 8;
-            this.emailadd.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2Transition1.SetDecoration(this.emailadd, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.emailadd.DefaultText = "";
-            this.emailadd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.emailadd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.emailadd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.emailadd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.emailadd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.emailadd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.emailadd.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.emailadd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.emailadd.IconRight = global::VPN.Properties.Resources.icons8_mail_account_48;
-            this.emailadd.IconRightOffset = new System.Drawing.Point(6, 0);
-            this.emailadd.IconRightSize = new System.Drawing.Size(25, 25);
-            this.emailadd.Location = new System.Drawing.Point(13, 316);
-            this.emailadd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.emailadd.Name = "emailadd";
-            this.emailadd.PasswordChar = '\0';
-            this.emailadd.PlaceholderText = "E-mail";
-            this.emailadd.SelectedText = "";
-            this.emailadd.Size = new System.Drawing.Size(302, 49);
-            this.emailadd.TabIndex = 46;
-            // 
-            // newusername
-            // 
-            this.newusername.Animated = true;
-            this.newusername.BackColor = System.Drawing.Color.Transparent;
-            this.newusername.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.newusername.BorderRadius = 8;
-            this.newusername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2Transition1.SetDecoration(this.newusername, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.newusername.DefaultText = "";
-            this.newusername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.newusername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.newusername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.newusername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.newusername.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.newusername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.newusername.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.newusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.newusername.IconRight = global::VPN.Properties.Resources.icons8_user_601;
-            this.newusername.IconRightOffset = new System.Drawing.Point(6, 0);
-            this.newusername.IconRightSize = new System.Drawing.Size(25, 25);
-            this.newusername.Location = new System.Drawing.Point(13, 75);
-            this.newusername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.newusername.Name = "newusername";
-            this.newusername.PasswordChar = '\0';
-            this.newusername.PlaceholderText = "Username";
-            this.newusername.SelectedText = "";
-            this.newusername.Size = new System.Drawing.Size(302, 49);
-            this.newusername.TabIndex = 42;
-            // 
-            // verifypass
-            // 
-            this.verifypass.Animated = true;
-            this.verifypass.BackColor = System.Drawing.Color.Transparent;
-            this.verifypass.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.verifypass.BorderRadius = 8;
-            this.verifypass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2Transition1.SetDecoration(this.verifypass, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.verifypass.DefaultText = "";
-            this.verifypass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.verifypass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.verifypass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.verifypass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.verifypass.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.verifypass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.verifypass.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.verifypass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.verifypass.IconRight = global::VPN.Properties.Resources.icons8_lock_96;
-            this.verifypass.IconRightOffset = new System.Drawing.Point(6, 0);
-            this.verifypass.IconRightSize = new System.Drawing.Size(25, 25);
-            this.verifypass.Location = new System.Drawing.Point(13, 233);
-            this.verifypass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.verifypass.Name = "verifypass";
-            this.verifypass.PasswordChar = '●';
-            this.verifypass.PlaceholderText = "Re-enter Password";
-            this.verifypass.SelectedText = "";
-            this.verifypass.Size = new System.Drawing.Size(302, 49);
-            this.verifypass.TabIndex = 45;
-            this.verifypass.UseSystemPasswordChar = true;
             // 
             // newpassword
             // 
@@ -511,7 +435,7 @@
             this.newpassword.IconRight = global::VPN.Properties.Resources.icons8_lock_96;
             this.newpassword.IconRightOffset = new System.Drawing.Point(6, 0);
             this.newpassword.IconRightSize = new System.Drawing.Size(25, 25);
-            this.newpassword.Location = new System.Drawing.Point(13, 154);
+            this.newpassword.Location = new System.Drawing.Point(29, 160);
             this.newpassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.newpassword.Name = "newpassword";
             this.newpassword.PasswordChar = '●';
@@ -521,26 +445,106 @@
             this.newpassword.TabIndex = 43;
             this.newpassword.UseSystemPasswordChar = true;
             // 
-            // createaccbtn
+            // label6
             // 
-            this.createaccbtn.Animated = true;
-            this.createaccbtn.AutoRoundedCorners = true;
-            this.createaccbtn.BackColor = System.Drawing.Color.Transparent;
-            this.createaccbtn.BorderRadius = 25;
-            this.guna2Transition1.SetDecoration(this.createaccbtn, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.createaccbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.createaccbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.createaccbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.createaccbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.createaccbtn.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.createaccbtn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createaccbtn.ForeColor = System.Drawing.Color.DimGray;
-            this.createaccbtn.Location = new System.Drawing.Point(41, 396);
-            this.createaccbtn.Name = "createaccbtn";
-            this.createaccbtn.Size = new System.Drawing.Size(245, 53);
-            this.createaccbtn.TabIndex = 44;
-            this.createaccbtn.Text = "Create account";
-            this.createaccbtn.Click += new System.EventHandler(this.createaccbtn_Click);
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.label6, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(54, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(248, 37);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "Create account";
+            // 
+            // verifypass
+            // 
+            this.verifypass.Animated = true;
+            this.verifypass.BackColor = System.Drawing.Color.Transparent;
+            this.verifypass.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.verifypass.BorderRadius = 8;
+            this.verifypass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.verifypass, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.verifypass.DefaultText = "";
+            this.verifypass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.verifypass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.verifypass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.verifypass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.verifypass.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.verifypass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.verifypass.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.verifypass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.verifypass.IconRight = global::VPN.Properties.Resources.icons8_lock_96;
+            this.verifypass.IconRightOffset = new System.Drawing.Point(6, 0);
+            this.verifypass.IconRightSize = new System.Drawing.Size(25, 25);
+            this.verifypass.Location = new System.Drawing.Point(29, 239);
+            this.verifypass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.verifypass.Name = "verifypass";
+            this.verifypass.PasswordChar = '●';
+            this.verifypass.PlaceholderText = "Re-enter Password";
+            this.verifypass.SelectedText = "";
+            this.verifypass.Size = new System.Drawing.Size(302, 49);
+            this.verifypass.TabIndex = 45;
+            this.verifypass.UseSystemPasswordChar = true;
+            // 
+            // newusername
+            // 
+            this.newusername.Animated = true;
+            this.newusername.BackColor = System.Drawing.Color.Transparent;
+            this.newusername.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.newusername.BorderRadius = 8;
+            this.newusername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.newusername, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.newusername.DefaultText = "";
+            this.newusername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.newusername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.newusername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.newusername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.newusername.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.newusername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.newusername.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.newusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.newusername.IconRight = global::VPN.Properties.Resources.icons8_user_601;
+            this.newusername.IconRightOffset = new System.Drawing.Point(6, 0);
+            this.newusername.IconRightSize = new System.Drawing.Size(25, 25);
+            this.newusername.Location = new System.Drawing.Point(29, 81);
+            this.newusername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.newusername.Name = "newusername";
+            this.newusername.PasswordChar = '\0';
+            this.newusername.PlaceholderText = "Username";
+            this.newusername.SelectedText = "";
+            this.newusername.Size = new System.Drawing.Size(302, 49);
+            this.newusername.TabIndex = 42;
+            // 
+            // emailadd
+            // 
+            this.emailadd.Animated = true;
+            this.emailadd.BackColor = System.Drawing.Color.Transparent;
+            this.emailadd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.emailadd.BorderRadius = 8;
+            this.emailadd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.emailadd, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.emailadd.DefaultText = "";
+            this.emailadd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.emailadd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.emailadd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.emailadd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.emailadd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.emailadd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.emailadd.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.emailadd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.emailadd.IconRight = global::VPN.Properties.Resources.icons8_mail_account_48;
+            this.emailadd.IconRightOffset = new System.Drawing.Point(6, 0);
+            this.emailadd.IconRightSize = new System.Drawing.Size(25, 25);
+            this.emailadd.Location = new System.Drawing.Point(29, 322);
+            this.emailadd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.emailadd.Name = "emailadd";
+            this.emailadd.PasswordChar = '\0';
+            this.emailadd.PlaceholderText = "E-mail";
+            this.emailadd.SelectedText = "";
+            this.emailadd.Size = new System.Drawing.Size(302, 49);
+            this.emailadd.TabIndex = 46;
             // 
             // guna2Transition1
             // 
@@ -602,7 +606,7 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2Button Createbtn;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label forgot;
         private Guna.UI2.WinForms.Guna2Button Loginbtn;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ToggleSwitch chkRememberMe;
@@ -618,7 +622,7 @@
         private Guna.UI2.WinForms.Guna2TextBox newpassword;
         private Guna.UI2.WinForms.Guna2TextBox newusername;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2Panel createpg;
         private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
+        private Guna.UI2.WinForms.Guna2Panel createpg;
     }
 }

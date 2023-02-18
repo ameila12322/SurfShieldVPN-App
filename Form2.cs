@@ -24,6 +24,7 @@ namespace VPN
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            createpg.BorderRadius= 25;
             
         }
 
@@ -59,7 +60,7 @@ namespace VPN
             guna2Transition1.HideSync(createpg);
         }
 
-        private async void Loginbtn_Click(object sender, EventArgs e)
+        private void Loginbtn_Click(object sender, EventArgs e)
         {
             string Username = txtUsername.Text;
             string Password = txtPassword.Text;
@@ -100,7 +101,8 @@ namespace VPN
                 else
                 {
                     // Credentials didn't match, display a message box
-                    MessageBox.Show("Wrong credentials");
+                    error2 form = new error2();
+                    form.ShowDialog();
                 }
             }
             catch (Exception ex)
@@ -133,16 +135,13 @@ namespace VPN
             Application.Exit();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void mail()
         {
             string recipient = "surfshieldvpn@gmail.com";
             string subject = "New User account application";
-            string body = "User details: " + newusername.Text + ", " + "Password-" + newpassword.Text + ", " + "Email:" + emailadd.Text;
+            string body = "User details: " + newusername.Text + ", " + "Password-" + newpassword.Text + ", " + "Email:" + emailadd;
 
             SmtpClient client = new SmtpClient("email-smtp.ap-northeast-1.amazonaws.com", 587);
             client.Credentials = new NetworkCredential("AKIAZWIQDHZBQABYKF4H", "BFZMfpk3wTEf5AAO2fHV4L5bBONtu6+IuKA5nqzW57l2");
@@ -159,7 +158,31 @@ namespace VPN
 
         private void createaccbtn_Click(object sender, EventArgs e)
         {
-            mail();
+            if (newusername.Text.Length > 0 && newpassword.Text.Length > 0 && verifypass.Text.Length > 0 && emailadd.Text.Length > 0)
+            {
+
+                if (newpassword.Text == verifypass.Text)
+                {
+                    //mail();
+                }
+                else
+                {
+                    error form = new error();
+                    form.ShowDialog();
+
+                }
+            }
+            else
+            {
+                error1 form = new error1();
+                form.ShowDialog();
+            }
+        }
+
+        private void forgot_Click(object sender, EventArgs e)
+        {
+            forgotdg form= new forgotdg();
+            form.ShowDialog();
         }
     }
 

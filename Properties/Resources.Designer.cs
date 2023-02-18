@@ -63,6 +63,36 @@ namespace VPN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _31_check_outline__1_ {
+            get {
+                object obj = ResourceManager.GetObject("31-check-outline (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3dpic12 {
+            get {
+                object obj = ResourceManager.GetObject("3dpic12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _56_warning_outline__1_ {
+            get {
+                object obj = ResourceManager.GetObject("56-warning-outline (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap australia_150px {
             get {
                 object obj = ResourceManager.GetObject("australia_150px", resourceCulture);
@@ -263,6 +293,16 @@ namespace VPN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_right_arrow_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-right-arrow-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_singapore_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-singapore-100", resourceCulture);
@@ -416,6 +456,16 @@ namespace VPN.Properties {
         internal static System.Drawing.Bitmap sweden_150px {
             get {
                 object obj = ResourceManager.GetObject("sweden_150px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unplugged__1_ {
+            get {
+                object obj = ResourceManager.GetObject("unplugged (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

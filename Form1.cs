@@ -96,9 +96,10 @@ namespace VPN
 
         private async void Connectbtn_Click(object sender, EventArgs e)
         {
-
+            
             if (!buttonClicked)
             {
+                connectdg form = new connectdg();
                 isActive = true;
                 starttrackdata();
                 gaugesetting();
@@ -120,7 +121,7 @@ namespace VPN
                         await Task.Delay(8000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
-                        MessageBox.Show("You've connected to server with udp");
+                        form.ShowDialog();
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
                         await Task.Delay(10000);
@@ -144,7 +145,7 @@ namespace VPN
                         await Task.Delay(8000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
-                        MessageBox.Show("You've connected to server with tcp");
+                        form.ShowDialog();
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
                         await Task.Delay(10000);
@@ -171,7 +172,7 @@ namespace VPN
                         await Task.Delay(8000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
-                        MessageBox.Show("You've connected to server with udp");
+                        form.ShowDialog();
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
                         await Task.Delay(10000);
@@ -195,7 +196,7 @@ namespace VPN
                         await Task.Delay(8000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
-                        MessageBox.Show("You've connected to server with tcp");
+                        form.ShowDialog();
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
                         await Task.Delay(10000);
@@ -222,7 +223,7 @@ namespace VPN
                         await Task.Delay(8000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
-                        MessageBox.Show("You've connected to server with udp");
+                        form.ShowDialog();
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
                         await Task.Delay(10000);
@@ -246,7 +247,7 @@ namespace VPN
                         await Task.Delay(8000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
-                        MessageBox.Show("You've connected to server with tcp");
+                        form.ShowDialog();
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
                         await Task.Delay(10000);
@@ -273,7 +274,7 @@ namespace VPN
                         await Task.Delay(8000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
-                        MessageBox.Show("You've connected to server with udp");
+                        form.ShowDialog();
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
                         await Task.Delay(10000);
@@ -297,7 +298,7 @@ namespace VPN
                         await Task.Delay(8000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
-                        MessageBox.Show("You've connected to server with tcp");
+                        form.ShowDialog();
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
                         await Task.Delay(10000);
@@ -324,7 +325,7 @@ namespace VPN
                         await Task.Delay(8000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
-                        MessageBox.Show("You've connected to server with udp");
+                        form.ShowDialog();
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
                         await Task.Delay(10000);
@@ -348,7 +349,7 @@ namespace VPN
                         await Task.Delay(8000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
-                        MessageBox.Show("You've connected to server with tcp");
+                        form.ShowDialog();
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
                         await Task.Delay(10000);
@@ -376,7 +377,7 @@ namespace VPN
                         ExternalIPlocation();
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
-                        MessageBox.Show("You've connected to server with udp");
+                        form.ShowDialog();
                         Connectbtn.Enabled = true;
 
                         await Task.Delay(20000);
@@ -400,7 +401,7 @@ namespace VPN
                         await Task.Delay(12000);
                         Connectbtn.Text = "Disconnect";
                         buttonClicked = true;
-                        MessageBox.Show("You've connected to server with tcp");
+                        form.ShowDialog();
                         ExternalIPlocation();
                         Connectbtn.Enabled = true;
                         await Task.Delay(20000);
@@ -433,8 +434,8 @@ namespace VPN
                 isActive = false;
                 ResetTime();
                 guna2RadialGauge1.Value = 0;
-
-
+                disconnectdg form = new disconnectdg();
+                form.ShowDialog();
             }
 
 

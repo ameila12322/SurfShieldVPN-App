@@ -21,7 +21,7 @@ using System.Timers;
 using System.Net.NetworkInformation;
 using Npgsql;
 
-namespace VPN
+namespace SurfShield
 {
     public partial class Form1 : Form
     {
@@ -610,7 +610,7 @@ namespace VPN
             System.Windows.Forms.Timer timer2 = new System.Windows.Forms.Timer();
 
             // Setting the interval for the timer
-            timer2.Interval= 12;
+            timer2.Interval= 8;
 
             // Enabling the timer
             timer2.Enabled = true;
@@ -641,6 +641,11 @@ namespace VPN
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void guna2RadialGauge1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

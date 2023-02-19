@@ -1,4 +1,4 @@
-﻿namespace VPN
+﻿namespace SurfShield
 {
     partial class error
     {
@@ -110,7 +110,7 @@
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::VPN.Properties.Resources._56_warning_outline__1_;
+            this.guna2PictureBox1.Image = global::SurfShield.Properties.Resources._56_warning_outline__1_;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(29, 32);
             this.guna2PictureBox1.Name = "guna2PictureBox1";

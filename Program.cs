@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VPN
+namespace SurfShield
 {
     internal static class Program
     {

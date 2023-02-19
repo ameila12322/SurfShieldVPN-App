@@ -1,4 +1,4 @@
-﻿namespace VPN
+﻿namespace SurfShield
 {
     partial class Form2
     {
@@ -78,7 +78,7 @@
             // 
             this.guna2PictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.guna2PictureBox8, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox8.Image = global::VPN.Properties.Resources.logo7;
+            this.guna2PictureBox8.Image = global::SurfShield.Properties.Resources.logo7;
             this.guna2PictureBox8.ImageRotate = 0F;
             this.guna2PictureBox8.Location = new System.Drawing.Point(493, 45);
             this.guna2PictureBox8.Name = "guna2PictureBox8";
@@ -220,7 +220,7 @@
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.IconRight = global::VPN.Properties.Resources.icons8_lock_96;
+            this.txtPassword.IconRight = global::SurfShield.Properties.Resources.icons8_lock_96;
             this.txtPassword.IconRightOffset = new System.Drawing.Point(6, 0);
             this.txtPassword.IconRightSize = new System.Drawing.Size(25, 25);
             this.txtPassword.Location = new System.Drawing.Point(29, 213);
@@ -250,7 +250,7 @@
             this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.IconRight = global::VPN.Properties.Resources.icons8_user_60;
+            this.txtUsername.IconRight = global::SurfShield.Properties.Resources.icons8_user_60;
             this.txtUsername.IconRightOffset = new System.Drawing.Point(6, 0);
             this.txtUsername.IconRightSize = new System.Drawing.Size(25, 25);
             this.txtUsername.Location = new System.Drawing.Point(29, 134);
@@ -314,7 +314,7 @@
             this.Createbtn.AutoRoundedCorners = true;
             this.Createbtn.BackColor = System.Drawing.Color.Transparent;
             this.Createbtn.BorderRadius = 25;
-            this.Createbtn.CustomImages.Image = global::VPN.Properties.Resources.icons8_right_arrow_32;
+            this.Createbtn.CustomImages.Image = global::SurfShield.Properties.Resources.icons8_right_arrow_32;
             this.guna2Transition1.SetDecoration(this.Createbtn, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Createbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Createbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -356,7 +356,7 @@
             // 
             this.createpg.AutoRoundedCorners = true;
             this.createpg.BackColor = System.Drawing.Color.Transparent;
-            this.createpg.BorderRadius = 25;
+            this.createpg.BorderRadius = 178;
             this.createpg.Controls.Add(this.createaccbtn);
             this.createpg.Controls.Add(this.backbtn);
             this.createpg.Controls.Add(this.newpassword);
@@ -432,7 +432,7 @@
             this.newpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.newpassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.newpassword.IconRight = global::VPN.Properties.Resources.icons8_lock_96;
+            this.newpassword.IconRight = global::SurfShield.Properties.Resources.icons8_lock_96;
             this.newpassword.IconRightOffset = new System.Drawing.Point(6, 0);
             this.newpassword.IconRightSize = new System.Drawing.Size(25, 25);
             this.newpassword.Location = new System.Drawing.Point(29, 160);
@@ -475,7 +475,7 @@
             this.verifypass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.verifypass.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.verifypass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.verifypass.IconRight = global::VPN.Properties.Resources.icons8_lock_96;
+            this.verifypass.IconRight = global::SurfShield.Properties.Resources.icons8_lock_96;
             this.verifypass.IconRightOffset = new System.Drawing.Point(6, 0);
             this.verifypass.IconRightSize = new System.Drawing.Size(25, 25);
             this.verifypass.Location = new System.Drawing.Point(29, 239);
@@ -505,7 +505,7 @@
             this.newusername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.newusername.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.newusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.newusername.IconRight = global::VPN.Properties.Resources.icons8_user_601;
+            this.newusername.IconRight = global::SurfShield.Properties.Resources.icons8_user_601;
             this.newusername.IconRightOffset = new System.Drawing.Point(6, 0);
             this.newusername.IconRightSize = new System.Drawing.Size(25, 25);
             this.newusername.Location = new System.Drawing.Point(29, 81);
@@ -534,7 +534,7 @@
             this.emailadd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.emailadd.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.emailadd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.emailadd.IconRight = global::VPN.Properties.Resources.icons8_mail_account_48;
+            this.emailadd.IconRight = global::SurfShield.Properties.Resources.icons8_mail_account_48;
             this.emailadd.IconRightOffset = new System.Drawing.Point(6, 0);
             this.emailadd.IconRightSize = new System.Drawing.Size(25, 25);
             this.emailadd.Location = new System.Drawing.Point(29, 322);
@@ -579,6 +579,7 @@
             this.Controls.Add(this.guna2PictureBox8);
             this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.Text = "Form2";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);

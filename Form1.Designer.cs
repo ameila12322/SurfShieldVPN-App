@@ -1,4 +1,4 @@
-﻿namespace VPN
+﻿namespace SurfShield
 {
     partial class Form1
     {
@@ -61,12 +61,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.pn_menu = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.Australia = new Guna.UI2.WinForms.Guna2Button();
             this.Japan = new Guna.UI2.WinForms.Guna2Button();
@@ -194,7 +188,7 @@
             // guna2PictureBox8
             // 
             this.guna2Transition1.SetDecoration(this.guna2PictureBox8, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox8.Image = global::VPN.Properties.Resources.logo7;
+            this.guna2PictureBox8.Image = global::SurfShield.Properties.Resources.logo7;
             this.guna2PictureBox8.ImageRotate = 0F;
             this.guna2PictureBox8.Location = new System.Drawing.Point(54, 614);
             this.guna2PictureBox8.Name = "guna2PictureBox8";
@@ -294,7 +288,7 @@
             this.guna2CircleButton1.FillColor = System.Drawing.Color.Transparent;
             this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Image = global::VPN.Properties.Resources.forward_150px;
+            this.guna2CircleButton1.Image = global::SurfShield.Properties.Resources.forward_150px;
             this.guna2CircleButton1.ImageSize = new System.Drawing.Size(38, 38);
             this.guna2CircleButton1.Location = new System.Drawing.Point(210, 379);
             this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(2);
@@ -498,6 +492,7 @@
             this.guna2RadialGauge1.ShowPercentage = false;
             this.guna2RadialGauge1.Size = new System.Drawing.Size(201, 201);
             this.guna2RadialGauge1.TabIndex = 2;
+            this.guna2RadialGauge1.ValueChanged += new System.EventHandler(this.guna2RadialGauge1_ValueChanged);
             // 
             // DU
             // 
@@ -532,12 +527,6 @@
             // 
             // pn_menu
             // 
-            this.pn_menu.Controls.Add(this.guna2Button5);
-            this.pn_menu.Controls.Add(this.guna2Button4);
-            this.pn_menu.Controls.Add(this.guna2Button3);
-            this.pn_menu.Controls.Add(this.guna2Button2);
-            this.pn_menu.Controls.Add(this.guna2Button1);
-            this.pn_menu.Controls.Add(this.label18);
             this.pn_menu.Controls.Add(this.label17);
             this.pn_menu.Controls.Add(this.Australia);
             this.pn_menu.Controls.Add(this.Japan);
@@ -554,159 +543,17 @@
             this.pn_menu.TabIndex = 3;
             this.pn_menu.Visible = false;
             // 
-            // guna2Button5
-            // 
-            this.guna2Button5.Animated = true;
-            this.guna2Button5.AutoRoundedCorners = true;
-            this.guna2Button5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.BorderRadius = 19;
-            this.guna2Button5.CustomImages.Image = global::VPN.Properties.Resources.sweden_150px;
-            this.guna2Button5.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button5.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
-            this.guna2Button5.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Transition1.SetDecoration(this.guna2Button5, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.Gray;
-            this.guna2Button5.Location = new System.Drawing.Point(16, 591);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(181, 41);
-            this.guna2Button5.TabIndex = 12;
-            this.guna2Button5.Text = "Sweden";
-            this.guna2Button5.TextOffset = new System.Drawing.Point(8, 0);
-            this.guna2Button5.UseTransparentBackground = true;
-            // 
-            // guna2Button4
-            // 
-            this.guna2Button4.Animated = true;
-            this.guna2Button4.AutoRoundedCorners = true;
-            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.BorderRadius = 19;
-            this.guna2Button4.CustomImages.Image = global::VPN.Properties.Resources.icons8_italy_100;
-            this.guna2Button4.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button4.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
-            this.guna2Button4.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Transition1.SetDecoration(this.guna2Button4, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.Gray;
-            this.guna2Button4.Location = new System.Drawing.Point(16, 546);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(181, 41);
-            this.guna2Button4.TabIndex = 11;
-            this.guna2Button4.Text = "Italy";
-            this.guna2Button4.TextOffset = new System.Drawing.Point(-5, 0);
-            this.guna2Button4.UseTransparentBackground = true;
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.Animated = true;
-            this.guna2Button3.AutoRoundedCorners = true;
-            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderRadius = 19;
-            this.guna2Button3.CustomImages.Image = global::VPN.Properties.Resources.france_150px;
-            this.guna2Button3.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
-            this.guna2Button3.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Transition1.SetDecoration(this.guna2Button3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.Gray;
-            this.guna2Button3.Location = new System.Drawing.Point(16, 499);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(181, 41);
-            this.guna2Button3.TabIndex = 10;
-            this.guna2Button3.Text = "France";
-            this.guna2Button3.TextOffset = new System.Drawing.Point(5, 0);
-            this.guna2Button3.UseTransparentBackground = true;
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 19;
-            this.guna2Button2.CustomImages.Image = global::VPN.Properties.Resources.icons8_switzerland_100;
-            this.guna2Button2.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
-            this.guna2Button2.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Transition1.SetDecoration(this.guna2Button2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.Gray;
-            this.guna2Button2.Location = new System.Drawing.Point(16, 452);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(181, 41);
-            this.guna2Button2.TabIndex = 9;
-            this.guna2Button2.Text = "Switzerland";
-            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button2.TextOffset = new System.Drawing.Point(-3, 0);
-            this.guna2Button2.UseTransparentBackground = true;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 19;
-            this.guna2Button1.CustomImages.Image = global::VPN.Properties.Resources.icons8_china_100;
-            this.guna2Button1.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
-            this.guna2Button1.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Transition1.SetDecoration(this.guna2Button1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Gray;
-            this.guna2Button1.Location = new System.Drawing.Point(16, 405);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(181, 41);
-            this.guna2Button1.TabIndex = 8;
-            this.guna2Button1.Text = "China";
-            this.guna2Button1.UseTransparentBackground = true;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.label18, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label18.Location = new System.Drawing.Point(14, 367);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(183, 20);
-            this.label18.TabIndex = 7;
-            this.label18.Text = "PREMIUM SERVERS";
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.guna2Transition1.SetDecoration(this.label17, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label17.Location = new System.Drawing.Point(32, 28);
+            this.label17.Location = new System.Drawing.Point(56, 90);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(148, 20);
+            this.label17.Size = new System.Drawing.Size(100, 20);
             this.label17.TabIndex = 6;
-            this.label17.Text = "FREE SERVERS";
+            this.label17.Text = " SERVERS";
             // 
             // Australia
             // 
@@ -714,7 +561,7 @@
             this.Australia.AutoRoundedCorners = true;
             this.Australia.BackColor = System.Drawing.Color.Transparent;
             this.Australia.BorderRadius = 19;
-            this.Australia.CustomImages.Image = global::VPN.Properties.Resources.australia_150px;
+            this.Australia.CustomImages.Image = global::SurfShield.Properties.Resources.australia_150px;
             this.Australia.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Australia.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
             this.Australia.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
@@ -726,7 +573,7 @@
             this.Australia.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
             this.Australia.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Australia.ForeColor = System.Drawing.Color.Gray;
-            this.Australia.Location = new System.Drawing.Point(16, 254);
+            this.Australia.Location = new System.Drawing.Point(16, 417);
             this.Australia.Name = "Australia";
             this.Australia.Size = new System.Drawing.Size(181, 41);
             this.Australia.TabIndex = 5;
@@ -741,7 +588,7 @@
             this.Japan.AutoRoundedCorners = true;
             this.Japan.BackColor = System.Drawing.Color.Transparent;
             this.Japan.BorderRadius = 19;
-            this.Japan.CustomImages.Image = global::VPN.Properties.Resources.Japan_Flag;
+            this.Japan.CustomImages.Image = global::SurfShield.Properties.Resources.Japan_Flag;
             this.Japan.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Japan.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
             this.Japan.CustomImages.ImageSize = new System.Drawing.Size(35, 20);
@@ -754,7 +601,7 @@
             this.Japan.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Japan.ForeColor = System.Drawing.Color.Gray;
             this.Japan.ImageOffset = new System.Drawing.Point(8, 0);
-            this.Japan.Location = new System.Drawing.Point(16, 207);
+            this.Japan.Location = new System.Drawing.Point(16, 356);
             this.Japan.Name = "Japan";
             this.Japan.Size = new System.Drawing.Size(181, 41);
             this.Japan.TabIndex = 4;
@@ -769,7 +616,7 @@
             this.UK.AutoRoundedCorners = true;
             this.UK.BackColor = System.Drawing.Color.Transparent;
             this.UK.BorderRadius = 19;
-            this.UK.CustomImages.Image = global::VPN.Properties.Resources.icons8_great_britain_100;
+            this.UK.CustomImages.Image = global::SurfShield.Properties.Resources.icons8_great_britain_100;
             this.UK.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.UK.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
             this.UK.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
@@ -781,7 +628,7 @@
             this.UK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
             this.UK.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UK.ForeColor = System.Drawing.Color.Gray;
-            this.UK.Location = new System.Drawing.Point(16, 160);
+            this.UK.Location = new System.Drawing.Point(16, 288);
             this.UK.Name = "UK";
             this.UK.Size = new System.Drawing.Size(181, 41);
             this.UK.TabIndex = 3;
@@ -796,7 +643,7 @@
             this.Singapore.AutoRoundedCorners = true;
             this.Singapore.BackColor = System.Drawing.Color.Transparent;
             this.Singapore.BorderRadius = 19;
-            this.Singapore.CustomImages.Image = global::VPN.Properties.Resources.icons8_singapore_100;
+            this.Singapore.CustomImages.Image = global::SurfShield.Properties.Resources.icons8_singapore_100;
             this.Singapore.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Singapore.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
             this.Singapore.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
@@ -808,7 +655,7 @@
             this.Singapore.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
             this.Singapore.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Singapore.ForeColor = System.Drawing.Color.Gray;
-            this.Singapore.Location = new System.Drawing.Point(16, 113);
+            this.Singapore.Location = new System.Drawing.Point(16, 222);
             this.Singapore.Name = "Singapore";
             this.Singapore.Size = new System.Drawing.Size(181, 41);
             this.Singapore.TabIndex = 2;
@@ -824,7 +671,7 @@
             this.USA.AutoRoundedCorners = true;
             this.USA.BackColor = System.Drawing.Color.Transparent;
             this.USA.BorderRadius = 19;
-            this.USA.CustomImages.Image = global::VPN.Properties.Resources.usa_150px;
+            this.USA.CustomImages.Image = global::SurfShield.Properties.Resources.usa_150px;
             this.USA.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.USA.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
             this.USA.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
@@ -836,7 +683,7 @@
             this.USA.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
             this.USA.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.USA.ForeColor = System.Drawing.Color.Gray;
-            this.USA.Location = new System.Drawing.Point(16, 66);
+            this.USA.Location = new System.Drawing.Point(16, 157);
             this.USA.Name = "USA";
             this.USA.Size = new System.Drawing.Size(181, 41);
             this.USA.TabIndex = 1;
@@ -850,7 +697,7 @@
             this.Netherlands.AutoRoundedCorners = true;
             this.Netherlands.BackColor = System.Drawing.Color.Transparent;
             this.Netherlands.BorderRadius = 19;
-            this.Netherlands.CustomImages.Image = global::VPN.Properties.Resources.netherlands_150px;
+            this.Netherlands.CustomImages.Image = global::SurfShield.Properties.Resources.netherlands_150px;
             this.Netherlands.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Netherlands.CustomImages.ImageOffset = new System.Drawing.Point(8, 0);
             this.Netherlands.CustomImages.ImageSize = new System.Drawing.Size(35, 35);
@@ -862,7 +709,7 @@
             this.Netherlands.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(38)))));
             this.Netherlands.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Netherlands.ForeColor = System.Drawing.Color.Gray;
-            this.Netherlands.Location = new System.Drawing.Point(16, 301);
+            this.Netherlands.Location = new System.Drawing.Point(16, 479);
             this.Netherlands.Name = "Netherlands";
             this.Netherlands.Size = new System.Drawing.Size(181, 41);
             this.Netherlands.TabIndex = 0;
@@ -905,7 +752,7 @@
             // 
             this.guna2Transition1.SetDecoration(this.guna2PictureBox5, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox5.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox5.Image = global::VPN.Properties.Resources.icons8_cloud_download_641;
+            this.guna2PictureBox5.Image = global::SurfShield.Properties.Resources.icons8_cloud_download_641;
             this.guna2PictureBox5.ImageRotate = 0F;
             this.guna2PictureBox5.Location = new System.Drawing.Point(34, 38);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
@@ -946,7 +793,7 @@
             // guna2PictureBox7
             // 
             this.guna2Transition1.SetDecoration(this.guna2PictureBox7, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox7.Image = global::VPN.Properties.Resources.icons8_big_data_502;
+            this.guna2PictureBox7.Image = global::SurfShield.Properties.Resources.icons8_big_data_502;
             this.guna2PictureBox7.ImageRotate = 0F;
             this.guna2PictureBox7.Location = new System.Drawing.Point(33, 42);
             this.guna2PictureBox7.Name = "guna2PictureBox7";
@@ -1020,7 +867,7 @@
             // 
             this.guna2Transition1.SetDecoration(this.guna2PictureBox6, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox6.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox6.Image = global::VPN.Properties.Resources.icons8_upload_to_cloud_501;
+            this.guna2PictureBox6.Image = global::SurfShield.Properties.Resources.icons8_upload_to_cloud_501;
             this.guna2PictureBox6.ImageRotate = 0F;
             this.guna2PictureBox6.Location = new System.Drawing.Point(40, 42);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
@@ -1070,7 +917,7 @@
             // 
             this.guna2PictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.guna2PictureBox9, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox9.Image = global::VPN.Properties.Resources.icons8_user_45;
+            this.guna2PictureBox9.Image = global::SurfShield.Properties.Resources.icons8_user_45;
             this.guna2PictureBox9.ImageRotate = 0F;
             this.guna2PictureBox9.Location = new System.Drawing.Point(1229, 37);
             this.guna2PictureBox9.Name = "guna2PictureBox9";
@@ -1084,7 +931,7 @@
             this.guna2PictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(31)))));
             this.guna2Transition1.SetDecoration(this.guna2PictureBox4, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(31)))));
-            this.guna2PictureBox4.Image = global::VPN.Properties.Resources.Screenshot_2023_02_08_150656_upscaled1;
+            this.guna2PictureBox4.Image = global::SurfShield.Properties.Resources.Screenshot_2023_02_08_150656_upscaled1;
             this.guna2PictureBox4.ImageRotate = 0F;
             this.guna2PictureBox4.Location = new System.Drawing.Point(243, 27);
             this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(2);
@@ -1192,12 +1039,6 @@
         private System.Windows.Forms.Label DR;
         private System.Windows.Forms.Label DU;
         private System.Windows.Forms.Label DS;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private Guna.UI2.WinForms.Guna2Button Australia;
         private Guna.UI2.WinForms.Guna2Button Japan;

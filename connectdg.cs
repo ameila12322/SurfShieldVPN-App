@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VPN
+namespace SurfShield
 {
     public partial class connectdg : Form
     {

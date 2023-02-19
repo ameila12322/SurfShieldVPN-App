@@ -14,7 +14,7 @@ using System.Configuration;
 using System.Net.Mail;
 using System.Net;
 
-namespace VPN
+namespace SurfShield
 {
     public partial class Form2 : Form
     {

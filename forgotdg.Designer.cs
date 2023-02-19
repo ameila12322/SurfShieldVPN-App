@@ -1,4 +1,4 @@
-﻿namespace VPN
+﻿namespace SurfShield
 {
     partial class forgotdg
     {
@@ -133,7 +133,7 @@
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::VPN.Properties.Resources._3dpic12;
+            this.guna2PictureBox1.Image = global::SurfShield.Properties.Resources._3dpic12;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(151, 5);
             this.guna2PictureBox1.Name = "guna2PictureBox1";

@@ -163,7 +163,9 @@ namespace SurfShield
 
                 if (newpassword.Text == verifypass.Text)
                 {
-                    //mail();
+                    mail();
+                    acccreate form = new acccreate();
+                    form.ShowDialog();
                 }
                 else
                 {

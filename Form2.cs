@@ -19,13 +19,13 @@ namespace SurfShield
     public partial class Form2 : Form
     {
         bool rememberchk;
-        
+
         public Form2()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-            createpg.BorderRadius= 25;
-            
+            createpg.BorderRadius = 25;
+
         }
 
         private void Createbtn_Click(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace SurfShield
             guna2Transition1.ShowSync(createpg);
         }
 
-      
+
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -46,17 +46,17 @@ namespace SurfShield
             // Autofill the text boxes if "Remember Me" is checked
             if (savedremember == true)
             {
-                
+
                 txtUsername.Text = savedUsername;
                 txtPassword.Text = savedPassword;
-                
+
             }
 
         }
 
         private void backbtn_Click(object sender, EventArgs e)
         {
-            createpg.Visible=false;
+            createpg.Visible = false;
             guna2Transition1.HideSync(createpg);
         }
 
@@ -116,7 +116,7 @@ namespace SurfShield
             }
         }
 
-     
+
 
         public string GetText()
         {
@@ -126,7 +126,7 @@ namespace SurfShield
 
         private void guna2ControlBox2_Click(object sender, EventArgs e)
         {
-            Form1 Form1= new Form1();
+            Form1 Form1 = new Form1();
             Form1.Close();
         }
 
@@ -135,13 +135,13 @@ namespace SurfShield
             Application.Exit();
         }
 
-       
+
 
         private void mail()
         {
             string recipient = "surfshieldvpn@gmail.com";
             string subject = "New User account application";
-            string body = "User details: " + newusername.Text + ", " + "Password-" + newpassword.Text + ", " + "Email:" + emailadd;
+            string body = "User details: " + newusername.Text + ", " + "Password-" + newpassword.Text + ", " + "Email:" + emailadd.Text;
 
             SmtpClient client = new SmtpClient("email-smtp.ap-northeast-1.amazonaws.com", 587);
             client.Credentials = new NetworkCredential("AKIAZWIQDHZBQABYKF4H", "BFZMfpk3wTEf5AAO2fHV4L5bBONtu6+IuKA5nqzW57l2");
@@ -164,6 +164,7 @@ namespace SurfShield
                 if (newpassword.Text == verifypass.Text)
                 {
                     mail();
+                    register();
                     acccreate form = new acccreate();
                     form.ShowDialog();
                 }
@@ -183,10 +184,48 @@ namespace SurfShield
 
         private void forgot_Click(object sender, EventArgs e)
         {
-            forgotdg form= new forgotdg();
+            forgotdg form = new forgotdg();
             form.ShowDialog();
         }
-    }
 
+        private void register()
+        {
+            string Username = newusername.Text;
+            string Password = newpassword.Text;
+            string Email = emailadd.Text;
+            // Set your connection string here
+            string connectionString = "Server=vpndb-do-user-13474542-0.b.db.ondigitalocean.com;Port=25060;Database=User_authentication;User Id=doadmin;Password=AVNS_p8XCGKsbkYveUlC7z2V;";
+
+
+            NpgsqlConnection connection = new NpgsqlConnection(connectionString);
+
+            try
+            {
+                connection.Open();
+                string input = "INSERT INTO users (Username, Password, Email) VALUES (@Username, @Password, @Email)";
+
+                NpgsqlCommand cmd = new NpgsqlCommand(input, connection);
+
+                // add parameters for the values to be inserted
+                cmd.Parameters.AddWithValue("@Username", newusername.Text);
+                cmd.Parameters.AddWithValue("@Password", newpassword.Text);
+                cmd.Parameters.AddWithValue("@Email", emailadd.Text);
+
+                // execute the SQL statement
+                cmd.ExecuteNonQuery();
+
+                // close the connection
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+
+    }
 
 }

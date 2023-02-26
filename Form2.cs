@@ -13,13 +13,24 @@ using System.Security.Cryptography;
 using System.Configuration;
 using System.Net.Mail;
 using System.Net;
+using System.IO;
+using MimeKit;
+using System.Text.RegularExpressions;
+using Amazon;
+using Amazon.SimpleEmail;
+using Amazon.SimpleEmail.Model;
+using static System.Net.WebRequestMethods;
+using System.IdentityModel.Protocols.WSTrust;
+using System.Runtime.ConstrainedExecution;
 
 namespace SurfShield
 {
     public partial class Form2 : Form
     {
         bool rememberchk;
-
+        string otp;
+       
+       
         public Form2()
         {
             InitializeComponent();
@@ -135,38 +146,59 @@ namespace SurfShield
             Application.Exit();
         }
 
-
-
-        private void mail()
+        public string Getotp()
         {
-            string recipient = "surfshieldvpn@gmail.com";
-            string subject = "New User account application";
-            string body = "User details: " + newusername.Text + ", " + "Password-" + newpassword.Text + ", " + "Email:" + emailadd.Text;
-
-            SmtpClient client = new SmtpClient("email-smtp.ap-northeast-1.amazonaws.com", 587);
-            client.Credentials = new NetworkCredential("AKIAZWIQDHZBQABYKF4H", "BFZMfpk3wTEf5AAO2fHV4L5bBONtu6+IuKA5nqzW57l2");
-            client.EnableSsl = true;
-
-            MailMessage message = new MailMessage();
-            message.From = new MailAddress("sujayautodrift@gmail.com");
-            message.To.Add(new MailAddress(recipient));
-            message.Subject = subject;
-            message.Body = body;
-
-            client.Send(message);
+            // Return the text in the textbox
+            return otp;
         }
 
-        private void createaccbtn_Click(object sender, EventArgs e)
+        private void otpverifymail()
         {
+            Random random = new Random();
+            otp = random.Next(100000, 999999).ToString();
+
+            var smtpClient = new SmtpClient("email-smtp.ap-northeast-1.amazonaws.com", 587)
+            {
+                Credentials = new NetworkCredential("AKIAZWIQDHZBU57BCVPH", "BCT8AAuoJ3UkBcuP+VTyesA71zJLf+TVfCG60xc86CUw"),
+                EnableSsl = true
+            };
+
+            // Email message configuration
+            var message = new MailMessage("surfshieldvpn@gmail.com", emailadd.Text)
+            {
+                Subject = "Email verification",
+                Body = "As a VPN service provider, SurfShield takes user security and privacy seriously." +
+                " To ensure that our users' accounts are protected, we require email verification when setting up an account. " +
+                "After registering, an OTP (One-Time Password) is sent to the user's email address. This OTP is a unique code that is only valid for a single use and provides an additional layer of security to the account." +
+                "By verifying their email address, users can be confident that their SurfShield account is secure and protected from unauthorized access." +
+                "The OTP is :  " + otp
+            };
+
+            // Send the email
+            smtpClient.Send(message);
+           
+           
+            otpverify form = new otpverify();
+            form.Owner = this;
+            form.ShowDialog();
+            
+        }
+
+
+
+        private async void createaccbtn_Click(object sender, EventArgs e)
+        {
+  
             if (newusername.Text.Length > 0 && newpassword.Text.Length > 0 && verifypass.Text.Length > 0 && emailadd.Text.Length > 0)
             {
 
                 if (newpassword.Text == verifypass.Text)
                 {
-                    mail();
-                    register();
-                    acccreate form = new acccreate();
-                    form.ShowDialog();
+                        otpverifymail();
+                        acccreate form = new acccreate();
+                    
+                        form.ShowDialog();
+                    
                 }
                 else
                 {
@@ -188,8 +220,20 @@ namespace SurfShield
             form.ShowDialog();
         }
 
-        private void register()
+        private string GenerateRandomToken()
         {
+            // Generate a random string of 16 characters
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            Random random = new Random();
+            return new string(Enumerable.Repeat(chars, 16).Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+
+
+        public void register()
+        {
+            
+            
+
             string Username = newusername.Text;
             string Password = newpassword.Text;
             string Email = emailadd.Text;

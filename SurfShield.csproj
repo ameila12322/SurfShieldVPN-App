@@ -64,6 +64,9 @@
     <Reference Include="AWSSDK.SimpleEmail, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
       <HintPath>packages\AWSSDK.SimpleEmail.3.7.100.74\lib\net45\AWSSDK.SimpleEmail.dll</HintPath>
     </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="Costura, Version=3.3.3.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
       <HintPath>packages\Costura.Fody.3.3.3\lib\net40\Costura.dll</HintPath>
     </Reference>
@@ -87,6 +90,9 @@
     </Reference>
     <Reference Include="Microsoft.Win32.SystemEvents, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Win32.SystemEvents.6.0.0\lib\net461\Microsoft.Win32.SystemEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="MimeKit, Version=3.5.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>packages\MimeKit.3.5.0\lib\net47\MimeKit.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -334,6 +340,12 @@
     <Compile Include="acccreate.Designer.cs">
       <DependentUpon>acccreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="otpverify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="otpverify.Designer.cs">
+      <DependentUpon>otpverify.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="error.resx">
@@ -362,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="acccreate.resx">
       <DependentUpon>acccreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="otpverify.resx">
+      <DependentUpon>otpverify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -513,6 +528,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\31-check-outline %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-otp-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('packages\Fody.4.0.2\build\Fody.targets')" />

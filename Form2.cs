@@ -22,6 +22,7 @@ using Amazon.SimpleEmail.Model;
 using static System.Net.WebRequestMethods;
 using System.IdentityModel.Protocols.WSTrust;
 using System.Runtime.ConstrainedExecution;
+//using static System.Net.Mime.MediaTypeNames;
 
 namespace SurfShield
 {
@@ -108,6 +109,7 @@ namespace SurfShield
                         Properties.Settings.Default.RememberMe = rememberchk;
                         Properties.Settings.Default.Save();
                     }
+
                 }
                 else
                 {
@@ -186,31 +188,39 @@ namespace SurfShield
 
 
 
-        private async void createaccbtn_Click(object sender, EventArgs e)
+        private  void createaccbtn_Click(object sender, EventArgs e)
         {
-  
-            if (newusername.Text.Length > 0 && newpassword.Text.Length > 0 && verifypass.Text.Length > 0 && emailadd.Text.Length > 0)
+            string mailchk =emailadd.Text;
+            if (mailchk.Contains("@") && mailchk.Contains(".com"))
             {
 
-                if (newpassword.Text == verifypass.Text)
+                if (newusername.Text.Length > 0 && newpassword.Text.Length > 0 && verifypass.Text.Length > 0 && emailadd.Text.Length > 0)
                 {
+
+                    if (newpassword.Text == verifypass.Text)
+                    {
                         otpverifymail();
                         acccreate form = new acccreate();
-                    
+
                         form.ShowDialog();
-                    
+
+                    }
+                    else
+                    {
+                        error form = new error();
+                        form.ShowDialog();
+
+                    }
                 }
                 else
                 {
-                    error form = new error();
+                    error1 form = new error1();
                     form.ShowDialog();
-
                 }
             }
             else
             {
-                error1 form = new error1();
-                form.ShowDialog();
+                MessageBox.Show("Please enter a valid email");
             }
         }
 
@@ -218,14 +228,6 @@ namespace SurfShield
         {
             forgotdg form = new forgotdg();
             form.ShowDialog();
-        }
-
-        private string GenerateRandomToken()
-        {
-            // Generate a random string of 16 characters
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-            Random random = new Random();
-            return new string(Enumerable.Repeat(chars, 16).Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
 

@@ -78,7 +78,7 @@ namespace SurfShield
             string Password = txtPassword.Text;
 
             // Set your connection string here
-            string connectionString = "Server=vpndb-do-user-13474542-0.b.db.ondigitalocean.com;Port=25060;Database=User_authentication;User Id=doadmin;Password=AVNS_p8XCGKsbkYveUlC7z2V;";
+            string connectionString = "connectionstring";
 
 
             NpgsqlConnection connection = new NpgsqlConnection(connectionString);
@@ -161,12 +161,12 @@ namespace SurfShield
 
             var smtpClient = new SmtpClient("email-smtp.ap-northeast-1.amazonaws.com", 587)
             {
-                Credentials = new NetworkCredential("AKIAZWIQDHZBU57BCVPH", "BCT8AAuoJ3UkBcuP+VTyesA71zJLf+TVfCG60xc86CUw"),
+                Credentials = new NetworkCredential("enter your keys", "enter your keys"),
                 EnableSsl = true
             };
 
             // Email message configuration
-            var message = new MailMessage("surfshieldvpn@gmail.com", emailadd.Text)
+            var message = new MailMessage("vpn@gmail.com", emailadd.Text)
             {
                 Subject = "Email verification",
                 Body = "As a VPN service provider, SurfShield takes user security and privacy seriously." +
@@ -240,7 +240,7 @@ namespace SurfShield
             string Password = newpassword.Text;
             string Email = emailadd.Text;
             // Set your connection string here
-            string connectionString = "Server=vpndb-do-user-13474542-0.b.db.ondigitalocean.com;Port=25060;Database=User_authentication;User Id=doadmin;Password=AVNS_p8XCGKsbkYveUlC7z2V;";
+            string connectionString = "connection string";
 
 
             NpgsqlConnection connection = new NpgsqlConnection(connectionString);
